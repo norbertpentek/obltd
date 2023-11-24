@@ -1,0 +1,480 @@
+body, html {
+    margin: 0rem;
+    padding: 0rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#hatterkepgoko {
+width: 100%;
+height: 30rem;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    overflow: hidden;
+}
+
+#videoBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Háttérszín beállítása */
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
+    text-align: center;
+    padding: 14px 16px; /* Padding a menüpontok között */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    /* background-color: #111;  */
+    color: white; /* Világosabb szín a kiemeléshez */
+    text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
+    background-color: transparent;
+}
+
+nav div img {
+    max-height: 400px; /* Állítsd be a kép maximális magasságát */
+    vertical-align: middle; /* Középre igazítás */
+    
+}
+
+.images-container {
+    display: flex; /* Flexbox beállítása */
+    justify-content: center; /* Képek középre igazítása */
+    align-items: center; /* Képek függőleges középre igazítása */
+    gap: 50px; /* Képek közötti távolság */
+    
+}
+
+.images-container img {
+    max-width: 20%; /* Képek maximális szélessége */
+    min-width: 200px;
+    height: auto; /* Arányos magasság beállítása */
+    box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.8);
+    margin-top: 0px;
+    padding-top: 0px;
+    border-radius: 15px;
+    animation: none;
+}
+
+.logo img{
+    max-width: 90%; 
+    height: auto; 
+    margin-top: 1px; 
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Középre igazítás vízszintesen */
+    width: 100%; 
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    
+}
+.logo img {
+    max-width: 53%; 
+    height: auto;
+    min-width: 500px;
+}
+
+nav {
+    position: fixed; /* Rögzített pozíció */
+    top: 0; /* A képernyő tetejére helyezi */
+    left: 0; /* A képernyő bal oldalára helyezi */
+    width: 100%; /* Teljes szélesség */
+    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
+    background-color: #333; /* Háttérszín beállítása */
+}
+
+body {
+    padding-top: 50px; /* Adj hozzá egy kis helyet a tetején, hogy a tartalom ne takarja el a menüsávot */
+}
+#services {
+    padding: 20px;
+    
+    text-align: center;
+}
+
+#services h2 {
+    color: #fafafa; /* Címszöveg színe */
+    margin-bottom: 15px;
+}
+
+#services ul {
+    list-style-type: none; /* Eltávolítja a pontokat a listából */
+    padding: 0;
+}
+
+#services li {
+    margin-bottom: 10px; /* Kis hely a lista elemek között */
+    font-size: 18px; /* A szöveg mérete */
+    color: white; /* Lista elemek színe */
+}
+
+
+
+body {
+    background: url('/kepek/ht.png') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding-top: 50px; /* vagy szükség szerinti érték */
+    min-height: 100vh;
+       
+    
+    
+}
+#services li {
+    visibility: hidden;
+    animation-name: slideInFromLeft;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+#about-us {
+    color: black;
+    padding: 150px;
+    font-size:120%;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+
+#about-us p {
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+
+#about-us h1 {
+    text-align: center;
+}
+p {
+    margin-bottom: 1em; /* Bekezdések alatti távolság */
+    line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
+    padding-bottom: 0.5em; /* Belső térköz a bekezdés alján */
+  }
+
+  /* Kezdeti állapot: nem homályos */
+.body-blur {
+    filter: blur(0);
+    transition: filter 5s; /* 5 másodperc alatt változik */
+}
+/* Homályos állapot */
+.blurred {
+    filter: blur(10px); /* vagy bármilyen más érték, amit preferálsz */
+}
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Hogy a háttérben legyen */
+}
+/* Homályosítás kezdő állapota */
+#background-image.blurred {
+    filter: blur(10px);
+}
+#background-image {
+    /* ...további stílusok... */
+    transition: filter 5s ease-in-out; /* 5 másodpercig tartó elhomályosítás */
+}
+.images-container img {
+    opacity: 0; /* Kezdetben elrejti a képeket */
+    transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
+}
+/* .images-container img:first-child {
+    animation: slideInFromLeft 1s ease-out forwards; 
+}
+.images-container img:last-child {
+    animation: slideInFromRight 1s ease-out forwards;
+} */
+
+
+#services li {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    /* További stílusok */
+}
+
+
+
+#background-con {
+    background: linear-gradient(to bottom right, #4d4d4d, #e6e6e6);
+
+}
+
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.contact-form div {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: .5rem;
+}
+
+.contact-form button {
+    padding: .5rem 1rem;
+    background-color: #4d4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #333333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form div {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: .5rem;
+    box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje meg a szélességet */
+}
+
+.contact-form button {
+    padding: .5rem 1rem;
+    background-color: #4d4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Teljes szélességű gomb mobil eszközökön */
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #333333;
+}
+
+/* Médialekérdezés kisebb képernyőkhöz */
+@media (max-width: 600px) {
+    .contact-form {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+
+.privacy-policy {
+    margin-bottom: 1rem;
+}
+
+.privacy-policy label {
+    margin-left: .5rem;
+}
+.contact-form input, .contact-form textarea {
+    /* Egyszerűsített árnyék, csak alul és jobbra */
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.45); /* Növelt intenzitású árnyék */
+    /* További stílusok, ha szükséges */
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    /* Fókuszált mezők árnyékának kiemelése */
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form button {
+    border-radius: 7px; /* Enyhe kerekítés */
+    /* További stílusok... */
+}
+
+
+.privacy-policy label {
+    font-size: 14px; /* Szöveg méretének módosítása */
+    color: black; /* Szöveg színének módosítása */
+    margin-left: .5rem;
+}
+/* policyhez */
+
+
+.social-media-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    display: inline-block; /* Az elemek egymás mellett jelenjenek meg */
+}
+
+.social-media-icons img {
+    width: 150px; /* Vagy az Ön által kívánt méret */
+    height: auto;
+}
+
+#about-us {
+    /* ... meglévő stílusok ... */
+    filter: blur(10px); /* Kezdeti homályosítás a szövegre */
+    transition: filter 3s ease-in-out; /* Tranzíció az élesítéshez */
+}
+
+.centered-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px; 
+    padding-top: 0px;
+}
+
+.centered-image img {
+    width: 50%; /* vagy bármilyen méret, amit szeretnél */
+    height: auto; /* megtartja a kép arányait */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Igazítja a menüpontokat és az ikont */
+    /* További stílusok... */
+}
+
+nav ul .facebook-icon {
+    position: absolute; /* Abszolút pozicionálás */
+    right: 0; 
+    align-items: center;
+}
+
+nav ul .facebook-icon img {
+    max-height: 40px; /* Vagy a kívánt méret */
+    /* További képstílusok... */
+    align-items: center;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Állítsd be a navigációs sáv magasságát */
+    z-index: 1000;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Új sor a függőleges középre igazításhoz */
+    height: 100%; /* Új sor a teljes magasság beállításához */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul .facebook-icon {
+    position: absolute;
+    right: 10px; /* Jobb oldali pozicionálás */
+    top: 50%; /* Függőleges középre helyezés */
+    transform: translateY(-50%); /* Függőleges középre igazítás */
+}
+
+nav ul .facebook-icon img {
+    height: 30px; /* Az ikon magasságának beállítása */
+}
+
+
+
+
+nav ul li.facebook-icon a:hover {
+    background-color: transparent; /* Átlátszó háttér */
+}
+
+#mainFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    color: rgba(245, 245, 245, 0.521);
+}
+
+
+
+
+
