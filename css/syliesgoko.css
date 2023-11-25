@@ -179,6 +179,7 @@ body {
 
 
 #about-us {
+    min-height: 100vh;
     color: black;
     padding: 150px;
     font-size:120%;
