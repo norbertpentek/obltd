@@ -256,25 +256,20 @@ p {
 }
 
 
-.contact-form {
-    max-width: 600px;
-    margin: auto;
-    padding: 1rem;
-}
 
 .contact-form div {
-    margin-bottom: 1rem;
+    margin-bottom: .9rem;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: .9rem;
 }
 
 
 
 .contact-form button {
-    padding: .5rem 1rem;
+    padding: .9rem 1rem;
     background-color: #4d4d4d;
     color: white;
     border: none;
@@ -286,11 +281,15 @@ p {
 }
 
 .contact-form {
-    min-height: 100;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    max-width: 900px;
     margin: auto;
     padding: 1rem;
     box-sizing: border-box;
+    min-height: 100vh;
+   
 }
 
 .contact-form div {
@@ -299,23 +298,22 @@ p {
 
 .contact-form label {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: .9rem;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
 .contact-form textarea {
-    width: 100%;
-    padding: .5rem;
+    padding: .9rem;
     box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje meg a szélességet */
     border-radius: 7px;
     width: 100%;
-    padding: .5rem;
+    min-height: 50px;
 }
 
 .contact-form button {
-    padding: .5rem 1rem;
+    padding: .9rem 1rem;
     background-color: #4d4d4d;
     color: white;
     border: none;
@@ -331,11 +329,10 @@ p {
 /* Médialekérdezés kisebb képernyőkhöz */
 @media (max-width: 600px) {
     .contact-form {
-        
-        min-height: 100vh; /* Teljes viewport magasság */
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
     }
 }
 
@@ -349,7 +346,7 @@ p {
 }
 
 .privacy-policy label {
-    margin-left: .5rem;
+    margin-left: .9rem;
 }
 .contact-form input, .contact-form textarea {
     /* Egyszerűsített árnyék, csak alul és jobbra */
@@ -368,7 +365,7 @@ p {
 .privacy-policy label {
     font-size: 14px; /* Szöveg méretének módosítása */
     color: black; /* Szöveg színének módosítása */
-    margin-left: .5rem;
+    margin-left: .9rem;
 }
 /* policyhez */
 
@@ -390,7 +387,7 @@ p {
 
 #about-us {
     /* ... meglévő stílusok ... */
-    filter: blur(10px); /* Kezdeti homályosítás a szövegre */
+    filter: blur(20px); /* Kezdeti homályosítás a szövegre */
     transition: filter 3s ease-in-out; /* Tranzíció az élesítéshez */
 }
 
@@ -477,4 +474,3 @@ nav ul li.facebook-icon a:hover {
 #background-con {
     min-height: 100vh;
 }
-
