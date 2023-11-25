@@ -190,18 +190,18 @@ body {
 
 }
 
-#about-us p {
+/* #about-us p {
 padding-bottom: 0px;
 margin-bottom: 0px;
-}
+} */
 
 #about-us h1 {
     text-align: center;
 }
-p {
-    margin-bottom: 1em; /* Bekezdések alatti távolság */
+#p {
+    margin: 1em; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
-    padding-bottom: 0.5em; /* Belső térköz a bekezdés alján */
+    padding: 1em; /* Belső térköz a bekezdés alján */
   }
 
   /* Kezdeti állapot: nem homályos */
