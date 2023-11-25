@@ -273,7 +273,7 @@ p {
     background-color: #4d4d4d;
     color: white;
     border: none;
-    cursor: pointer;
+   
 }
 
 .contact-form button:hover {
@@ -310,6 +310,10 @@ p {
     border-radius: 7px;
     width: 100%;
     min-height: 50px;
+    height: 5vh;
+}
+.contact-form textarea{
+    height: 10vh;
 }
 
 .contact-form button {
@@ -317,7 +321,7 @@ p {
     background-color: #4d4d4d;
     color: white;
     border: none;
-    cursor: pointer;
+    
     width: 100%; /* Teljes szélességű gomb mobil eszközökön */
     box-sizing: border-box;
 }
@@ -332,7 +336,7 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+    
     }
 }
 
