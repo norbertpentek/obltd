@@ -258,18 +258,18 @@ p {
 
 
 .contact-form div {
-    margin-bottom: .9rem;
+    margin-bottom: 1rem;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: .9rem;
+    margin-bottom: 1rem;
 }
 
 
 
 .contact-form button {
-    padding: .9rem 1rem;
+    padding: 1rem 1rem;
     background-color: #4d4d4d;
     color: white;
     border: none;
@@ -283,13 +283,12 @@ p {
 .contact-form {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
     max-width: 900px;
     margin: auto;
     padding: 1rem;
     box-sizing: border-box;
     min-height: 100vh;
-   
+   font-size:x-large;
 }
 
 .contact-form div {
@@ -298,16 +297,16 @@ p {
 
 .contact-form label {
     display: block;
-    margin-bottom: .9rem;
+    margin-bottom: 1rem;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
 .contact-form textarea {
-    padding: .9rem;
+    padding: 1rem;
     box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje meg a szélességet */
-    border-radius: 7px;
+    border-radius: 10px;
     width: 100%;
     min-height: 50px;
     height: 5vh;
@@ -317,7 +316,7 @@ p {
 }
 
 .contact-form button {
-    padding: .9rem 1rem;
+    padding: 1rem 1rem;
     background-color: #4d4d4d;
     color: white;
     border: none;
@@ -345,12 +344,10 @@ p {
 
 
 
-.privacy-policy {
-    margin-bottom: 1rem;
-}
+
 
 .privacy-policy label {
-    margin-left: .9rem;
+    margin-left: 1rem;
 }
 .contact-form input, .contact-form textarea {
     /* Egyszerűsített árnyék, csak alul és jobbra */
@@ -367,12 +364,14 @@ p {
 
 
 .privacy-policy label {
-    font-size: 14px; /* Szöveg méretének módosítása */
+    font-size: 19px; /* Szöveg méretének módosítása */
     color: black; /* Szöveg színének módosítása */
-    margin-left: .9rem;
+    margin-left: 1rem;
 }
 /* policyhez */
-
+#send {
+    border-radius: 10px;
+}
 
 .social-media-section {
     text-align: center;
