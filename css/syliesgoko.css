@@ -181,19 +181,22 @@ body {
 #about-us {
     min-height: 100vh;
     color: black;
-    padding: 150px;
+    padding: 0px 150px;
     font-size:120%;
     font-weight: bold;
-    padding-top: 0px;
-    padding-bottom: 0px;
     margin-bottom: 0px;
 
 }
-
-/* #about-us p {
-padding-bottom: 0px;
-margin-bottom: 0px;
-} */
+#about-us {
+    /* ... meglévő stílusok ... */
+    filter: blur(20px); /* Kezdeti homályosítás a szövegre */
+    transition: filter 3s ease-in-out; /* Tranzíció az élesítéshez */
+}
+@media (min-width:650px) {
+    #about-us {
+       padding: 0px 0px 0px 0px;
+    }
+}
 
 #about-us h1 {
     text-align: center;
@@ -201,7 +204,7 @@ margin-bottom: 0px;
 #p {
     margin: 1em; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
-    padding: 1em; /* Belső térköz a bekezdés alján */
+    padding: 1; /* Belső térköz a bekezdés alján */
     font-size: 16px;
   }
 
@@ -342,13 +345,6 @@ margin-bottom: 0px;
     }
 }
 
-
-
-
-
-
-
-
 .privacy-policy label {
     margin-left: 1rem;
 }
@@ -393,11 +389,7 @@ margin-bottom: 0px;
     height: auto;
 }
 
-#about-us {
-    /* ... meglévő stílusok ... */
-    filter: blur(20px); /* Kezdeti homályosítás a szövegre */
-    transition: filter 3s ease-in-out; /* Tranzíció az élesítéshez */
-}
+
 
 .centered-image {
     display: flex;
