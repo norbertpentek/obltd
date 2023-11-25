@@ -289,6 +289,7 @@ p {
     box-sizing: border-box;
     min-height: 100vh;
    font-size:x-large;
+   max-width: 700px;
 }
 
 .contact-form div {
@@ -371,6 +372,8 @@ p {
 /* policyhez */
 #send {
     border-radius: 10px;
+    height: 60px;
+    font-size: x-large;
 }
 
 .social-media-section {
@@ -384,7 +387,7 @@ p {
 }
 
 .social-media-icons img {
-    width: 150px; /* Vagy az Ön által kívánt méret */
+    width: 190px; /* Vagy az Ön által kívánt méret */
     height: auto;
 }
 
