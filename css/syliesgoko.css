@@ -202,6 +202,7 @@ margin-bottom: 0px;
     margin: 1em; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
     padding: 1em; /* Belső térköz a bekezdés alján */
+    font-size: 16px;
   }
 
   /* Kezdeti állapot: nem homályos */
