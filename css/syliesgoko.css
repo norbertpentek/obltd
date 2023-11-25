@@ -182,7 +182,6 @@ body {
     min-height: 100vh;
     color: black;
     padding: 0px 150px;
-    font-size:120%;
     font-weight: bold;
     margin-bottom: 0px;
 
@@ -190,14 +189,20 @@ body {
 #about-us {
     /* ... meglévő stílusok ... */
     filter: blur(20px); /* Kezdeti homályosítás a szövegre */
-    transition: filter 3s ease-in-out; /* Tranzíció az élesítéshez */
+    transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
 }
 @media (min-width:650px) {
     #about-us {
        padding: 0px 50px 0px 50px;
-       font-size: x-large;
+      font-size: 3vw;
     }
 }
+@media only screen and (max-width: 650px) {
+    #p {
+        font-size: 3vw;
+    }
+}
+
 
 #about-us h1 {
     text-align: center;
@@ -206,7 +211,7 @@ body {
     margin: 1em; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
     padding: 1; /* Belső térköz a bekezdés alján */
-    font-size: 16px;
+    
   }
 
   /* Kezdeti állapot: nem homályos */
