@@ -481,3 +481,9 @@ nav ul li.facebook-icon a:hover {
 #background-con {
     min-height: 100vh;
 }
+
+
+@media screen and (max-width: 480px) {
+  #p {font-size: 16px;
+line-height: 1.6;}  
+} 
