@@ -299,7 +299,7 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     min-height: 100vh;
-   font-size:large;
+   font-size:small;
    max-width: 700px;
 }
 
@@ -413,7 +413,7 @@ body {
 nav ul {
     display: flex;
     justify-content: flex-start; /* Igazítja a menüpontokat és az ikont */
-    /* További stílusok... */
+    
 }
 
 nav ul .facebook-icon {
@@ -424,8 +424,7 @@ nav ul .facebook-icon {
 
 nav ul .facebook-icon img {
     max-height: 40px; /* Vagy a kívánt méret */
-    /* További képstílusok... */
-    align-items: center;
+    padding-top: 90px;
 }
 
 
@@ -447,6 +446,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
 nav ul .facebook-icon {
@@ -460,11 +460,21 @@ nav ul .facebook-icon img {
     height: 30px; /* Az ikon magasságának beállítása */
 }
 
-
-
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+}
+    nav a {
+        font-size: calc(1vw + 1vh + 0.5vmin);
+    }
 
 nav ul li.facebook-icon a:hover {
     background-color: transparent; /* Átlátszó háttér */
+}
+nav li {
+    flex: 1;
+
 }
 
 #mainFooter {
