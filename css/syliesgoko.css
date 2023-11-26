@@ -299,7 +299,7 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     min-height: 100vh;
-   font-size:x-large;
+   font-size:large;
    max-width: 700px;
 }
 
@@ -322,7 +322,7 @@ body {
     width: 100%;
     min-height: 50px;
     height: 5vh;
-    font-size:xx-large;
+    font-size:large;
 }
 .contact-form textarea{
     height: 10vh;
