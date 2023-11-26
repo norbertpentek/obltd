@@ -197,9 +197,9 @@ body {
       font-size: 3vw;
     }
 }
-@media only screen and (max-width: 650px) {
+@media (max-width: 650px) {
     #p {
-        font-size: 2vw;
+        font-size: 1.2vw;
     }
 }
 
