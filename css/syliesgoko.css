@@ -91,7 +91,7 @@ nav div img {
     display: flex;
     justify-content: center; /* Középre igazítás vízszintesen */
     width: 100%; 
-    margin-top: 0px;
+    margin-top: 50px;
     margin-bottom: 0px; 
     
 }
@@ -101,14 +101,7 @@ nav div img {
     min-width: 500px;
 }
 
-nav {
-    position: fixed; /* Rögzített pozíció */
-    top: 0; /* A képernyő tetejére helyezi */
-    left: 0; /* A képernyő bal oldalára helyezi */
-    width: 100%; /* Teljes szélesség */
-    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
-    background-color: #333; /* Háttérszín beállítása */
-}
+
 
 body {
     padding-top: 50px; /* Adj hozzá egy kis helyet a tetején, hogy a tartalom ne takarja el a menüsávot */
@@ -140,7 +133,7 @@ body {
 .hattersz {
     background: url('/kepek/ht.png') no-repeat center center;
     background-size: cover;
-    margin: 0;
+    margin: 0px;
     padding-top: 50px; /* vagy szükség szerinti érték */
     min-height: 100vh;
        
@@ -476,6 +469,26 @@ nav li {
     flex: 1;
 
 }
+
+
+
+
+
+nav {
+    position: fixed; /* Rögzített pozíció */
+    top: 0; /* A képernyő tetejére helyezi */
+    left: 0; /* A képernyő bal oldalára helyezi */
+    width: 100%; /* Teljes szélesség */
+    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
+    background-color: #333; /* Háttérszín beállítása */
+    height: 100px;
+}
+
+
+
+
+
+
 
 #mainFooter {
     position: fixed;
