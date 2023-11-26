@@ -481,12 +481,14 @@ nav {
     width: 100%; /* Teljes szélesség */
     z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
     background-color: #333; /* Háttérszín beállítása */
-    height: 100px;
+    
 }
 
 
 
-
+#nav1 {
+    height: 130px;
+}
 
 
 
