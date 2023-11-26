@@ -181,7 +181,7 @@ body {
 #about-us {
     min-height: 100vh;
     color: black;
-    padding: 0px 150px;
+    padding: 0px 5px;
     font-weight: bold;
     margin-bottom: 0px;
 
@@ -193,13 +193,14 @@ body {
 }
 @media (min-width:650px) {
     #about-us {
-       padding: 0px 50px 0px 50px;
-      font-size: 1vw;
+       
+      font-size: 3.2vw;
     }
 }
 @media (max-width: 650px) {
     #p {
-        font-size: 1.2vw;
+        font-size: 3.2vw;
+        padding: 5px;
     }
 }
 
@@ -401,7 +402,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 0px; 
-    padding-top: 0px;
+    padding: 0px;
 }
 
 .centered-image img {
