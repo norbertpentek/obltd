@@ -442,3 +442,17 @@ nav, #nav1 {
 #myForm{
     padding-top: 5.5rem;
 }
+
+
+
+nav ul li a {
+    font-size: 16px; /* Alapértelmezett betűméret */
+    /* További meglévő stílusok... */
+}
+
+/* Médialekérdezés kisebb képernyőméretekhez */
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 18px; /* Minimum betűméret */
+    }
+}
