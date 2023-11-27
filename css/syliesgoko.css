@@ -94,9 +94,10 @@ nav div img {
     
 }
 .logo img {
-    max-width: 53%; 
+    /* max-width: 53%;  */
     height: auto;
     min-width: 400px;
+    max-width: 800px;
 }
 #services {
     padding: 15px;
@@ -171,19 +172,19 @@ nav div img {
     transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
     
 }
-
-@media (min-width:650px) {
-    #about-us {
+/* 
+ @media (min-width:650px) {
+    #p {
        
       font-size: 3.2vw;
-    }
-}
-@media (max-width: 650px) {
+    } 
+} */
+/* @media (max-width: 650px) {
     #p {
         font-size: 3.2vw;
         padding: 5px;
     }
-}
+} */
 
 
 #about-us h1 {
@@ -195,6 +196,14 @@ nav div img {
     padding: 1; /* Belső térköz a bekezdés alján */
     font-size: 14px;
   }
+
+
+ @media (min-width:650px) {
+    #p {
+       
+      font-size: 1.7vw;
+    } 
+}
 
   /* Kezdeti állapot: nem homályos */
 .body-blur {
