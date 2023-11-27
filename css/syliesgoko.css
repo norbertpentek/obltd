@@ -79,7 +79,11 @@ nav div img {
     padding-top: 0px;
     border-radius: 15px;
     animation: none;
+    opacity: 0; /* Kezdetben elrejti a képeket */
+    transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
+    max-width: 300px;
 }
+
 
 .logo {
     display: flex;
@@ -225,10 +229,6 @@ nav div img {
 #background-image {
     /* ...további stílusok... */
     transition: filter 5s ease-in-out; /* 5 másodpercig tartó elhomályosítás */
-}
-.images-container img {
-    opacity: 0; /* Kezdetben elrejti a képeket */
-    transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
 }
 
 
