@@ -1,8 +1,8 @@
 body, html {
     margin: 0rem;
     padding: 0rem;
-    margin-top: 0;
-    padding-top: 0;
+    
+   
 }
 
 #hatterkepgoko {
@@ -81,17 +81,11 @@ nav div img {
     animation: none;
 }
 
-.logo img{
-    max-width: 90%; 
-    height: auto; 
-    margin-top: 1px; 
-}
-
 .logo {
     display: flex;
     justify-content: center; /* Középre igazítás vízszintesen */
     width: 100%; 
-    margin-top: 50px;
+    margin-top: 6rem;
     margin-bottom: 0px; 
     
 }
@@ -99,12 +93,6 @@ nav div img {
     max-width: 53%; 
     height: auto;
     min-width: 500px;
-}
-
-
-
-body {
-    padding-top: 50px; /* Adj hozzá egy kis helyet a tetején, hogy a tartalom ne takarja el a menüsávot */
 }
 #services {
     padding: 20px;
@@ -126,6 +114,10 @@ body {
     margin-bottom: 10px; /* Kis hely a lista elemek között */
     font-size: 18px; /* A szöveg mérete */
     color: white; /* Lista elemek színe */
+    visibility: hidden;
+    animation-name: slideInFromLeft;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
 }
 
 
@@ -137,8 +129,6 @@ body {
     padding-top: 50px; /* vagy szükség szerinti érték */
     min-height: 100vh;
        
-    
-    
 }
 #services li {
     visibility: hidden;
@@ -177,13 +167,10 @@ body {
     padding: 0px 5px;
     font-weight: bold;
     margin-bottom: 0px;
-
-}
-#about-us {
-    /* ... meglévő stílusok ... */
     filter: blur(20px); /* Kezdeti homályosítás a szövegre */
     transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
 }
+
 @media (min-width:650px) {
     #about-us {
        
@@ -344,10 +331,6 @@ body {
     
     }
 }
-
-.privacy-policy label {
-    margin-left: 1rem;
-}
 .contact-form input, .contact-form textarea {
     /* Egyszerűsített árnyék, csak alul és jobbra */
     box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.45); /* Növelt intenzitású árnyék */
@@ -405,93 +388,35 @@ body {
 
 nav ul {
     display: flex;
-    justify-content: flex-start; /* Igazítja a menüpontokat és az ikont */
-    
-}
-
-nav ul .facebook-icon {
-    position: absolute; /* Abszolút pozicionálás */
-    right: 0; 
-    align-items: center;
-}
-
-nav ul .facebook-icon img {
-    max-height: 40px; /* Vagy a kívánt méret */
-    padding-top: 90px;
-}
-
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Állítsd be a navigációs sáv magasságát */
-    z-index: 1000;
-    background-color: #333;
-}
-
-nav ul {
-    display: flex;
     justify-content: flex-start;
     align-items: center; /* Új sor a függőleges középre igazításhoz */
     height: 100%; /* Új sor a teljes magasság beállításához */
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
-}
-
-nav ul .facebook-icon {
-    position: absolute;
-    right: 10px; /* Jobb oldali pozicionálás */
-    top: 50%; /* Függőleges középre helyezés */
-    transform: translateY(-50%); /* Függőleges középre igazítás */
-}
-
-nav ul .facebook-icon img {
-    height: 30px; /* Az ikon magasságának beállítása */
-}
-
-nav {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x:auto;
 }
     nav a {
         font-size: calc(1vw + 1vh + 0.1vmin);
     }
 
-nav ul li.facebook-icon a:hover {
-    background-color: transparent; /* Átlátszó háttér */
-}
 nav li {
     flex: 1;
 
 }
 
-
-
-
-
-nav {
+nav, #nav1 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:auto;
     position: fixed; /* Rögzített pozíció */
     top: 0; /* A képernyő tetejére helyezi */
     left: 0; /* A képernyő bal oldalára helyezi */
     width: 100%; /* Teljes szélesség */
     z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
     background-color: #333; /* Háttérszín beállítása */
-    
-}
-
-
-
-#nav1 {
     height:auto;
 }
-nav {
-    height: auto;
-}
+
 
 
 #mainFooter {
@@ -503,8 +428,6 @@ nav {
     color: rgba(245, 245, 245, 0.521);
 }
 
-
-
 #background-con {
     min-height: 100vh;
 }
@@ -512,4 +435,8 @@ nav {
 #agree {
     height: 30px;
     width: 30px;
+    
+}
+#myForm{
+    padding-top: 5.5rem;
 }
