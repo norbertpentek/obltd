@@ -130,7 +130,7 @@ nav div img {
 
 
 .hattersz {
-    background: url('/kepek/ht.png') no-repeat center center;
+    background: no-repeat center center;
     background-size: cover;
     margin: 0px;
     padding-top: 30px; /* vagy szükség szerinti érték */
@@ -459,7 +459,10 @@ nav ul li a {
 
 
 
-.image-container img{
-max-height: 400px;
-max-width: 400px;
+ .image-container img{           /*   ez itt ideiglenes beallitas */
+max-height: 400px;              /*   ez itt ideiglenes beallitas */
+max-width: 400px;               /*   ez itt ideiglenes beallitas */
+}                               /*   ez itt ideiglenes beallitas */
+#hattergallery {                    /*   ez itt ideiglenes beallitas */
+    background-color:#4d4d4d;   /*   ez itt ideiglenes beallitas */
 }
