@@ -171,8 +171,8 @@ nav div img {
     transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
     
 }
-
-/* @media (min-width:650px) {
+/* 
+@media (min-width:650px) {
     #about-us {
        
       font-size: 3.2vw;
