@@ -65,5 +65,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (form) {
             form.reset(); // Törli az űrlap mezőit
         }
-    }, 1000);
+    }, 100);
 });
