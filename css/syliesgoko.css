@@ -453,6 +453,10 @@ nav ul li a {
 /* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 18px; /* Minimum betűméret */
+        font-size: 14px; /* Minimum betűméret */
     }
+}
+nav ul li a {
+    padding: 3px 5px; /* Változtasd meg a padding értékeket */
+    /* További meglévő stílusok... */
 }
