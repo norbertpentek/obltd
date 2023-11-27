@@ -193,7 +193,7 @@ nav div img {
     margin: 1rem; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
     padding: 1; /* Belső térköz a bekezdés alján */
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /* Kezdeti állapot: nem homályos */
