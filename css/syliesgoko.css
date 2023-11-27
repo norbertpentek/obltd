@@ -398,6 +398,7 @@ nav ul {
 }
     nav a {
         font-size: calc(1vw + 1vh + 0.1vmin);
+        
     }
 
 nav li {
