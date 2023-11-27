@@ -489,7 +489,9 @@ nav {
 #nav1 {
     height:auto;
 }
-
+nav {
+    height: auto;
+}
 
 
 #mainFooter {
