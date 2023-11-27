@@ -92,7 +92,7 @@ nav div img {
 .logo img {
     max-width: 53%; 
     height: auto;
-    min-width: 500px;
+    min-width: 400px;
 }
 #services {
     padding: 20px;
@@ -460,3 +460,8 @@ nav ul li a {
     padding: 3px 5px; /* Változtasd meg a padding értékeket */
     /* További meglévő stílusok... */
 }
+
+
+
+
+
