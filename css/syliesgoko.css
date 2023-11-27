@@ -95,7 +95,7 @@ nav div img {
     min-width: 400px;
 }
 #services {
-    padding: 20px;
+    padding: 15px;
     
     text-align: center;
 }
@@ -119,7 +119,9 @@ nav div img {
     animation-duration: 0.5s; 
     animation-fill-mode: forwards;
 }
-
+#services h1 {
+    font-size: 20px;
+}
 
 
 .hattersz {
@@ -135,6 +137,7 @@ nav div img {
     animation-name: slideInFromLeft;
     animation-duration: 0.5s; 
     animation-fill-mode: forwards;
+    animation: slideInFromLeft 0.5s ease-out forwards;
 }
 
 @keyframes slideInFromLeft {
@@ -171,7 +174,7 @@ nav div img {
     transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
     
 }
-/* 
+
 @media (min-width:650px) {
     #about-us {
        
@@ -183,7 +186,7 @@ nav div img {
         font-size: 3.2vw;
         padding: 5px;
     }
-} */
+}
 
 
 #about-us h1 {
@@ -226,18 +229,6 @@ nav div img {
 .images-container img {
     opacity: 0; /* Kezdetben elrejti a képeket */
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
-}
-/* .images-container img:first-child {
-    animation: slideInFromLeft 1s ease-out forwards; 
-}
-.images-container img:last-child {
-    animation: slideInFromRight 1s ease-out forwards;
-} */
-
-
-#services li {
-    animation: slideInFromLeft 0.5s ease-out forwards;
-    /* További stílusok */
 }
 
 
