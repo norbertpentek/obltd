@@ -169,9 +169,10 @@ nav div img {
     margin-bottom: 0px;
     filter: blur(20px); /* Kezdeti homályosítás a szövegre */
     transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
+    
 }
 
-@media (min-width:650px) {
+/* @media (min-width:650px) {
     #about-us {
        
       font-size: 3.2vw;
@@ -182,7 +183,7 @@ nav div img {
         font-size: 3.2vw;
         padding: 5px;
     }
-}
+} */
 
 
 #about-us h1 {
@@ -192,7 +193,7 @@ nav div img {
     margin: 1em; /* Bekezdések alatti távolság */
     line-height: 1.6; /* A sorok magassága, ami segít a szöveg olvashatóságán */
     padding: 1; /* Belső térköz a bekezdés alján */
-    
+    font-size: 18px;
   }
 
   /* Kezdeti állapot: nem homályos */
