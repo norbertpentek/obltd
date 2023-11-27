@@ -96,7 +96,7 @@ nav div img {
 .logo img {
     /* max-width: 53%;  */
     height: auto;
-    min-width: 400px;
+    min-width: 300px;
     max-width: 800px;
 }
 #services {
