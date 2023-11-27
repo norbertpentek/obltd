@@ -459,3 +459,7 @@ nav ul li a {
 
 
 
+.image-container img{
+max-height: 400px;
+max-width: 400px;
+}
