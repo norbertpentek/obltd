@@ -126,7 +126,7 @@ nav div img {
     background: url('/kepek/ht.png') no-repeat center center;
     background-size: cover;
     margin: 0px;
-    padding-top: 70px; /* vagy szükség szerinti érték */
+    padding-top: 30px; /* vagy szükség szerinti érték */
     min-height: 100vh;
        
 }
@@ -385,6 +385,7 @@ nav div img {
 .centered-image img {
     width: 50%; /* vagy bármilyen méret, amit szeretnél */
     height: auto; /* megtartja a kép arányait */
+    max-width: 30rem;
 }
 
 nav ul {
