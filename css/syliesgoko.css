@@ -126,7 +126,7 @@ nav div img {
     background: url('/kepek/ht.png') no-repeat center center;
     background-size: cover;
     margin: 0px;
-    padding-top: 50px; /* vagy szükség szerinti érték */
+    padding-top: 70px; /* vagy szükség szerinti érték */
     min-height: 100vh;
        
 }
