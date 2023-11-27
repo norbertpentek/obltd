@@ -136,13 +136,6 @@ nav div img {
     min-height: 100vh;
        
 }
-#services li {
-    visibility: hidden;
-    animation-name: slideInFromLeft;
-    animation-duration: 0.5s; 
-    animation-fill-mode: forwards;
-    animation: slideInFromLeft 0.5s ease-out forwards;
-}
 
 @keyframes slideInFromLeft {
     0% {
