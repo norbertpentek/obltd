@@ -53,35 +53,6 @@ setTimeout(function() {
     if (aboutUs) {
         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
     }
-}, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
+}, 300); // 3 másodperc után alkalmazza az elmosódást és élesítést
 
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Késleltetés az űrlapmezők törléséhez
-    setTimeout(function() {
-        var form = document.getElementById('myForm');
-        if (form) {
-            form.reset(); // Törli az űrlap mezőit
-        }
-    }, 3000);
-});
-
-
-
-
-
-//proba a send re frissites
-
-
-    window.addEventListener('beforeunload', function() {
-        // Töröljük az összes mezőt az űrlapon
-        document.querySelectorAll('#myForm input[type="text"]').forEach(function(input) {
-            input.value = '';
-        });
-
-        // Töröljük a jelölőnégyzet állapotát
-        document.getElementById('agree').checked = false;
-    });
 
