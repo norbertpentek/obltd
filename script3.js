@@ -67,3 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 3000);
 });
+
+
+
+
+
+//proba a send re frissites
+<script>
+    document.getElementById('send').addEventListener('click', function() {
+        window.location.reload()
+    
+    });
+</script>
