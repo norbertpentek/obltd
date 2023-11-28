@@ -73,12 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //proba a send re frissites
-window.addEventListener('beforeunload', function() {
-    // Töröljük az összes mezőt az űrlapon
-    document.querySelectorAll('#send input[type="text"]').forEach(function(input) {
-        input.value = '';
+
+
+    window.addEventListener('beforeunload', function() {
+        // Töröljük az összes mezőt az űrlapon
+        document.querySelectorAll('#myForm input[type="text"]').forEach(function(input) {
+            input.value = '';
+        });
+
+        // Töröljük a jelölőnégyzet állapotát
+        document.getElementById('agree').checked = false;
     });
 
-    // Töröljük a jelölőnégyzet állapotát
-    document.getElementById('agree').checked = false;
-});
