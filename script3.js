@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //proba a send re frissites
-<script>
+
     document.getElementById('send').addEventListener('click', function() {
-        window.location.reload()
+        window.location.reload();
     
     });
-</script>
+
