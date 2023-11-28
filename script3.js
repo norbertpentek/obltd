@@ -73,19 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //proba a send re frissites
-     document.getElementById('send').addEventListener('submit', function(event) {
-        var requiredFieldsFilled = Array.from(document.querySelectorAll('input[required]')).every(function(input) {
-            return input.value.trim() !== '';
-        });
-
-        var policyChecked = document.getElementById('agree').checked;
-
-        if (!requiredFieldsFilled || !policyChecked) {
-            event.preventDefault();
-            alert('Kérjük, töltse ki a kötelező mezőket és pipálja ki a jelölőnégyzetet.');
-        } else {
-            setTimeout(function() {
-                window.location.reload();
-            }, 500);
-        }
+window.addEventListener('beforeunload', function() {
+    // Töröljük az összes mezőt az űrlapon
+    document.querySelectorAll('#send input[type="text"]').forEach(function(input) {
+        input.value = '';
     });
+
+    // Töröljük a jelölőnégyzet állapotát
+    document.getElementById('agree').checked = false;
+});
