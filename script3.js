@@ -53,6 +53,22 @@ setTimeout(function() {
     if (aboutUs) {
         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
     }
-}, 300); // 3 másodperc után alkalmazza az elmosódást és élesítést
+}, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
 
+
+    window.addEventListener('focus', function() {
+        window.location.reload();
+    });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Késleltetés az űrlapmezők törléséhez
+    setTimeout(function() {
+        var form = document.getElementById('myForm');
+        if (form) {
+            form.reset(); // Törli az űrlap mezőit
+        }
+    }, 3000);
+});
 
