@@ -340,6 +340,7 @@ nav div img {
 
 
 .privacy-policy label {
+    display: inline-block;
     font-size: 19px; /* Szöveg méretének módosítása */
     color: black; /* Szöveg színének módosítása */
     margin-left: 1rem;
@@ -429,8 +430,11 @@ nav, #nav1 {
 }
 
 #agree {
-    height: 30px;
-    width: 30px;
+    
+    height: 20px;
+    width: 20px;
+    padding-right: 0;
+    margin-right: 0;
     
 }
 #myForm{
