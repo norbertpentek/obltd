@@ -34,6 +34,12 @@
 
 
 
+
+    
+
+
+
+
     
 
     <form id="myForm" action="https://formspree.io/f/xleyyled" method="POST" class="contact-form">
@@ -67,6 +73,36 @@
         <button id="send" type="submit">Send</button>
     </div>
         <!--   ez a resz a policyhez -->
+
+
+
+
+
+
+
+        <div id="counter">Számláló értéke: 0</div>
+
+        <script>
+            // Ellenőrizzük, hogy van-e már mentett számláló érték a localStorage-ben
+            var count = localStorage.getItem('pageLoadCount');
+            if (count === null) {
+                count = 0;
+            } else {
+                count = parseInt(count);
+            }
+    
+            // Növeljük a számláló értékét és mentjük a localStorage-ba
+            count++;
+            localStorage.setItem('pageLoadCount', count);
+    
+            // Frissítjük a számláló megjelenítését a felületen
+            document.getElementById('counter').innerText = 'Számláló értéke: ' + count;
+        </script>
+        
+
+
+
+
 
         
 <div class="social-media-section">
