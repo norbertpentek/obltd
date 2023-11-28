@@ -72,3 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 3000);
 });
 
+document.getElementById('send').addEventListener('click', function() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 5000); // 5000 ms = 5 másodperc
+});
