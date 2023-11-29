@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (form) {
             form.reset(); // Törli az űrlap mezőit
         }
-    }, 500);
+    }, 1000);
 });
 
 document.getElementById('send').addEventListener('click', function() {
     setTimeout(function() {
         window.location.reload();
-    }, 1); // 5000 ms = 5 másodperc
+    }, 1000); // 5000 ms = 5 másodperc
 });
