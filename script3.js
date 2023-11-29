@@ -56,9 +56,9 @@ setTimeout(function() {
 }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
 
 
-    window.addEventListener('focus', function() {
-        window.location.reload();
-    });
+    // window.addEventListener('focus', function() {
+    //     window.location.reload();
+    // });
 
 
 
