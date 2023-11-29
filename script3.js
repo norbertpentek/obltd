@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 });
 
-document.getElementById('send').addEventListener('click', function() {
-        setTimeout(function() {
-            var form = document.getElementById('myForm');
-            if (form) {
-                form.reset(); // Törli az űrlap mezőit
-            }
-        }, 2001); // 1000 ms = 5 másodperc
-    });
+// document.getElementById('send').addEventListener('click', function() {
+//         setTimeout(function() {
+//             var form = document.getElementById('myForm');
+//             if (form) {
+//                 form.reset(); // Törli az űrlap mezőit
+//             }
+//         }, 2001); // 1000 ms = 5 másodperc
+//     });
