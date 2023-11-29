@@ -62,18 +62,18 @@ setTimeout(function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Késleltetés az űrlapmezők törléséhez
-//     setTimeout(function() {
-//         var form = document.getElementById('myForm');
-//         if (form) {
-//             form.reset(); // Törli az űrlap mezőit
-//         }
-//     }, 1000);
-// });
+document.addEventListener('DOMContentLoaded', function() {
+    // Késleltetés az űrlapmezők törléséhez
+    setTimeout(function() {
+        var form = document.getElementById('myForm');
+        if (form) {
+            form.reset(); // Törli az űrlap mezőit
+        }
+    }, 3000);
+});
 
-// document.getElementById('send').addEventListener('click', function() {
-//     setTimeout(function() {
-//         window.location.reload();
-//     }, 1000); // 5000 ms = 5 másodperc
-// });
+document.getElementById('sendButton').addEventListener('click', function() {
+        setTimeout(function() {
+            window.location.reload();
+        }, 5000); // 5000 ms = 5 másodperc
+    });
