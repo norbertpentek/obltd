@@ -56,9 +56,14 @@ setTimeout(function() {
 }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
 
 
-    // window.addEventListener('focus', function() {
-    //     window.location.reload();
-    // });
+    window.addEventListener('focus', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlap mezőit
+            }
+        }, 1500);
+    });
 
 
 
@@ -74,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('send').addEventListener('click', function() {
         setTimeout(function() {
-            window.location.reload();
-        }, 1001); // 1000 ms = 5 másodperc
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlap mezőit
+            }
+        }, 2001); // 1000 ms = 5 másodperc
     });
