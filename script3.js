@@ -62,15 +62,15 @@ setTimeout(function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Késleltetés az űrlapmezők törléséhez
-    setTimeout(function() {
-        var form = document.getElementById('myForm');
-        if (form) {
-            form.reset(); // Törli az űrlap mezőit
-        }
-    }, 1000);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Késleltetés az űrlapmezők törléséhez
+//     setTimeout(function() {
+//         var form = document.getElementById('myForm');
+//         if (form) {
+//             form.reset(); // Törli az űrlap mezőit
+//         }
+//     }, 1000);
+// });
 
 document.getElementById('send').addEventListener('click', function() {
     setTimeout(function() {
