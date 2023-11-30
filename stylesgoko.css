@@ -1,0 +1,114 @@
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Háttérszín beállítása */
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
+    text-align: center;
+    padding: 14px 16px; /* Padding a menüpontok között */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    /* background-color: #111;  */
+    color: white; /* Világosabb szín a kiemeléshez */
+    text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
+    background-color: transparent;
+}
+
+nav div img {
+    max-height: 400px; /* Állítsd be a kép maximális magasságát */
+    vertical-align: middle; /* Középre igazítás */
+}
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Új sor a függőleges középre igazításhoz */
+    height: 100%; /* Új sor a teljes magasság beállításához */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+    nav a {
+        font-size: calc(1vw + 1vh + 0.1vmin);
+        
+    }
+nav li {
+    flex: 1;
+}
+nav, #nav1 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+    position: fixed; /* Rögzített pozíció */
+    top: 0; /* A képernyő tetejére helyezi */
+    left: 0; /* A képernyő bal oldalára helyezi */
+    width: 100%; /* Teljes szélesség */
+    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
+    background-color: #333; /* Háttérszín beállítása */
+    height:auto;
+}
+nav ul li a {
+    font-size: 16px; /* Alapértelmezett betűméret */
+    /* További meglévő stílusok... */
+}
+
+/* Médialekérdezés kisebb képernyőméretekhez */
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 14px; /* Minimum betűméret */
+    }
+}
+nav ul li a {
+    padding: 3px 5px; /* Változtasd meg a padding értékeket */
+    /* További meglévő stílusok... */
+}
+#bodygallery {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Engedélyezi a függőleges görgetést */
+    background-color: #333;
+
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 oszlop */
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr)); /* Dinamikus sorok, min. 250px magasság */
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 100vw;
+    padding-bottom: 10px; /* Hozzáad egy kis helyet az alján a görgetéshez */
+    
+}
+
+#gallery a {
+    display: block;
+    overflow: hidden;
+    height: 100%; /* Biztosítja, hogy a linkek kitöltsék a cella magasságát */
+}
+
+#gallery img {
+    width: 100%;
+    height: 300px;   /*100% rol proba------------------------------*/
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Médialekérdezés mobil nézethez */
+@media (max-width: 600px) {
+    #gallery {
+        grid-template-columns: 1fr; /* 1 oszlop mobil nézeten */
+    }
+}
