@@ -84,8 +84,8 @@ nav ul li a {
 
 #gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 oszlop */
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr)); /* Dinamikus sorok, min. 250px magasság */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 370px; 
     grid-gap: 10px;
     width: 100%;
     max-width: 100vw;
@@ -108,13 +108,19 @@ nav ul li a {
     object-position: center;
     border-radius: 15px;
 }
-
 /* Médialekérdezés mobil nézethez */
 @media (max-width: 600px) {
     #gallery {
-        grid-template-columns: 1fr; /* 1 oszlop mobil nézeten */
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* 2 oszlop */
+    grid-auto-rows: 190px;
     }
-}
+    #gallery img {
+        width: 100%;
+        height:150px;   /*100% rol proba------------------------------*/
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px;
+    }}
 #gallery {
     
     text-align: center;
