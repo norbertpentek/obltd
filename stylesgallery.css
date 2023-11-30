@@ -89,7 +89,7 @@ nav ul li a {
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Egységes szélesség minden képhez */
-    grid-template-rows: 200px; /* Egységes magasság minden képhez */
+    grid-auto-rows: 200px;
     grid-gap: 10px;
     padding: 53px 0 10px 0;
 }
@@ -106,6 +106,6 @@ nav ul li a {
 @media (max-width: 600px) {
     #gallery {
         grid-template-columns: repeat(3, 1fr); /* Kisebb képernyőkön kevesebb oszlop */
-        grid-template-rows: repeat(auto-fill, 150px); /* Kisebb magasság mobil nézethez */
+        grid-auto-rows:150px; /* Kisebb magasság mobil nézethez */
     }
 }
