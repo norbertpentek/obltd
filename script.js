@@ -2,7 +2,7 @@ window.onload = function() {
     // Smooth scroll és egyéb kódok...
 
     // Késleltetés és animáció beállítása a képek beúsztatásához
-    const slideInDelay = 100; // 1 milliszekundum késleltetés
+    const slideInDelay = 200; // 1 milliszekundum késleltetés
     const leftImage = document.querySelector('.images-container img:first-child');
     const rightImage = document.querySelector('.images-container img:last-child');
     if (leftImage && rightImage) {
