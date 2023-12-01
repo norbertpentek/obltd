@@ -1,5 +1,3 @@
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -7,11 +5,9 @@ nav ul {
     overflow: hidden;
     background-color: #333; /* Háttérszín beállítása */
 }
-
 nav ul li {
     float: left;
 }
-
 nav ul li a {
     display: block;
     color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
@@ -19,14 +15,12 @@ nav ul li a {
     padding: 14px 16px; /* Padding a menüpontok között */
     text-decoration: none;
 }
-
 nav ul li a:hover {
     /* background-color: #111;  */
     color: white; /* Világosabb szín a kiemeléshez */
     text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
     background-color: transparent;
 }
-
 nav div img {
     max-height: 400px; /* Állítsd be a kép maximális magasságát */
     vertical-align: middle; /* Középre igazítás */
@@ -41,8 +35,7 @@ nav ul {
     padding: 0;
 }
     nav a {
-        font-size: calc(1vw + 1vh + 0.1vmin);
-        
+        font-size: calc(1vw + 1vh + 0.1vmin);  
     }
 nav li {
     flex: 1;
@@ -63,7 +56,6 @@ nav ul li a {
     font-size: 16px; /* Alapértelmezett betűméret */
     /* További meglévő stílusok... */
 }
-
 /* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
@@ -80,12 +72,6 @@ nav ul li a {
     overflow-y: auto; /* Engedélyezi a függőleges görgetést */
     background-color: black;
 }
-
-
-
-
-
-
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Egységes szélesség minden képhez */
@@ -93,7 +79,6 @@ nav ul li a {
     grid-gap: 10px;
     padding: 53px 0 10px 0;
 }
-
 #gallery img {
     width: 100%;
     height: 100%; /* Az egész cellát kitölti */
@@ -101,7 +86,6 @@ nav ul li a {
     object-position: center;
     border-radius: 15px;
 }
-
 /* Médialekérdezés mobil nézethez */
 @media (max-width: 600px) {
     #gallery {
@@ -109,8 +93,7 @@ nav ul li a {
         padding: 41px 0 0 0;
         grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Kisebb képernyőkön kevesebb oszlop */
         grid-auto-rows: 90px; /* Kisebb magasság mobil nézethez */
-        grid-gap: 3px;
-        
+        grid-gap: 3px;   
     }
     #bodygallery { 
         padding: 0 3px;

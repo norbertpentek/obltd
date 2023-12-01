@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
     // Animációs késleltetés a "#services li" elemekre
     const listItems = document.querySelectorAll('#services li');
     for (var i = 0; i < listItems.length; i++) {
         listItems[i].style.animationDelay = (i * 0.3) + 's';
     }
-
     // Elmosódás eltávolítása és újra alkalmazása
     function removeBlur() {
         var background = document.getElementById('about-us-background');
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
             background.classList.remove('blurred');
         }
     }
-
     removeBlur();
 
     // Újra alkalmazza az elmosódást 5 másodperc után
@@ -32,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
             background.classList.add('blurred');
         }
     }, 4); // 5 másodperc után újra alkalmazza az elmosódást
-
     // Elmosódás eltávolítása a navigációs linkek kattintásakor
     var navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(function(link) {
@@ -40,13 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
-
 // A meglévő setTimeout függvényen belül
 setTimeout(function() {
     var backgroundImage = document.getElementById('background-image');
     var aboutUs = document.getElementById('about-us'); // Hozzáadjuk az about-us elemet
-
     if (backgroundImage) {
         backgroundImage.classList.add('blurred');
     }
@@ -54,8 +47,6 @@ setTimeout(function() {
         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
     }
 }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
-
-
     window.addEventListener('focus', function() {
         setTimeout(function() {
             var form = document.getElementById('myForm');
@@ -64,9 +55,6 @@ setTimeout(function() {
             }
         }, 1500);
     });
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Késleltetés az űrlapmezők törléséhez
     setTimeout(function() {
@@ -76,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 1000);
 });
-
 document.getElementById('send').addEventListener('click', function() {
         setTimeout(function() {
             var form = document.getElementById('myForm');

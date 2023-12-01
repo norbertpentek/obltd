@@ -1,5 +1,3 @@
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -7,11 +5,9 @@ nav ul {
     overflow: hidden;
     background-color: #333; /* Háttérszín beállítása */
 }
-
 nav ul li {
     float: left;
 }
-
 nav ul li a {
     display: block;
     color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
@@ -19,7 +15,6 @@ nav ul li a {
     padding: 14px 16px; /* Padding a menüpontok között */
     text-decoration: none;
 }
-
 nav ul li a:hover {
     /* background-color: #111;  */
     color: white; /* Világosabb szín a kiemeléshez */
@@ -81,7 +76,6 @@ nav ul li a {
     background-color: black;
 
 }
-
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -90,7 +84,6 @@ nav ul li a {
     width: 100%;
     max-width: 100vw;
     padding: 53px 0 10px 0;
-    
 }
 
 #gallery a {
@@ -100,7 +93,6 @@ nav ul li a {
     color: whitesmoke;
     text-decoration: none;
 }
-
 #gallery img {
     width: 100%;
     height:350px;   /*100% rol proba------------------------------*/
@@ -123,6 +115,5 @@ nav ul li a {
     }}
 #gallery {
     
-    text-align: center;
-    
+    text-align: center;  
 }
