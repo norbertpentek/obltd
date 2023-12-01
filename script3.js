@@ -1,13 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scroll a "Home" linkre kattintáskor
-    // var homeLink = document.querySelector('a[href="#home"]');
-    // if (homeLink) {
-    //     homeLink.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         window.scrollTo({ top: 0, behavior: 'smooth' });
-    //     });
-    // }
     // Animációs késleltetés a "#services li" elemekre
     const listItems = document.querySelectorAll('#services li');
     for (var i = 0; i < listItems.length; i++) {
@@ -21,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     removeBlur();
-
     // Újra alkalmazza az elmosódást 5 másodperc után
     setTimeout(function() {
         var background = document.getElementById('about-us-background');
@@ -34,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(function(link) {
         link.addEventListener('click', removeBlur);
     });
-
 });
 // A meglévő setTimeout függvényen belül
 setTimeout(function() {
@@ -47,14 +37,14 @@ setTimeout(function() {
         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
     }
 }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
-    window.addEventListener('focus', function() {
-        setTimeout(function() {
-            var form = document.getElementById('myForm');
-            if (form) {
-                form.reset(); // Törli az űrlap mezőit
-            }
-        }, 1500);
-    });
+    // window.addEventListener('focus', function() {
+    //     setTimeout(function() {
+    //         var form = document.getElementById('myForm');
+    //         if (form) {
+    //             form.reset(); // Törli az űrlapmezőit
+    //         }
+    //     }, 1500);
+    // });
 document.addEventListener('DOMContentLoaded', function() {
     // Késleltetés az űrlapmezők törléséhez
     setTimeout(function() {
