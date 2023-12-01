@@ -6,8 +6,8 @@ window.onload = function() {
     const leftImage = document.querySelector('.images-container img:first-child');
     const rightImage = document.querySelector('.images-container img:last-child');
     if (leftImage && rightImage) {
-        leftImage.style.animation = `slideInFromLeft 1s ease-out ${slideInDelay}ms forwards`;
-        rightImage.style.animation = `slideInFromRight 1s ease-out ${slideInDelay}ms forwards`;
+        leftImage.style.animation = `slideInFromLeft 2s ease-out ${slideInDelay}ms forwards`;
+        rightImage.style.animation = `slideInFromRight 2s ease-out ${slideInDelay}ms forwards`;
     }
 };
 
