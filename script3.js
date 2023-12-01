@@ -1,13 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll a "Home" linkre kattintáskor
-    var homeLink = document.querySelector('a[href="#home"]');
-    if (homeLink) {
-        homeLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+    // var homeLink = document.querySelector('a[href="#home"]');
+    // if (homeLink) {
+    //     homeLink.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         window.scrollTo({ top: 0, behavior: 'smooth' });
+    //     });
+    // }
     // Animációs késleltetés a "#services li" elemekre
     const listItems = document.querySelectorAll('#services li');
     for (var i = 0; i < listItems.length; i++) {
