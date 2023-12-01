@@ -124,6 +124,8 @@ nav ul li a {
     opacity: 0; /* Kezdetben elrejti a képeket */
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
     max-width: 300px;
+    height: auto;
+    width: auto;
 }
 
 
@@ -140,6 +142,8 @@ nav ul li a {
     height: auto;
     min-width: 200px;
     max-width: 800px;
+    height: auto;
+    width: auto;
 }
 #services {
     padding: 15px;
