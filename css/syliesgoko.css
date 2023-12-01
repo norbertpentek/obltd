@@ -1,15 +1,11 @@
 body, html {
     margin: 0rem;
     padding: 0rem;
-    
-   
 }
-
 #hatterkepgoko {
 width: 100%;
 height: 30rem;
 }
-
 .video-background {
     position: fixed;
     top: 0;
@@ -19,7 +15,6 @@ height: 30rem;
     z-index: -100;
     overflow: hidden;
 }
-
 #videoBackground {
     position: absolute;
     top: 50%;
@@ -29,7 +24,6 @@ height: 30rem;
     height: 100%;
     object-fit: cover;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -37,35 +31,30 @@ nav ul {
     overflow: hidden;
     background-color: #333; /* Háttérszín beállítása */
 }
-
 nav ul li {
     float: left;
 }
-
 nav ul li a {
     display: block;
-    color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
+    color: rgba(255, 255, 255, 0.688); 
     text-align: center;
-    padding: 14px 16px; /* Padding a menüpontok között */
+    padding: 14px 16px; 
     text-decoration: none;
 }
-
 nav ul li a:hover {
-    /* background-color: #111;  */
-    color: white; /* Világosabb szín a kiemeléshez */
+    color: white; 
     text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
     background-color: transparent;
 }
-
 nav div img {
-    max-height: 400px; /* Állítsd be a kép maximális magasságát */
+    max-height: 400px; 
     vertical-align: middle; /* Középre igazítás */
 }
 nav ul {
     display: flex;
     justify-content: flex-start;
     align-items: center; /* Új sor a függőleges középre igazításhoz */
-    height: 100%; /* Új sor a teljes magasság beállításához */
+    height: 100%; 
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -81,38 +70,31 @@ nav, #nav1 {
     display: flex;
     flex-wrap: nowrap;
     overflow-x:auto;
-    position: fixed; /* Rögzített pozíció */
-    top: 0; /* A képernyő tetejére helyezi */
-    left: 0; /* A képernyő bal oldalára helyezi */
-    width: 100%; /* Teljes szélesség */
-    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
-    background-color: #333; /* Háttérszín beállítása */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    background-color: #333; 
     height:auto;
 }
 nav ul li a {
-    font-size: 16px; /* Alapértelmezett betűméret */
-    /* További meglévő stílusok... */
+    font-size: 16px;
 }
-
-/* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 14px; /* Minimum betűméret */
+        font-size: 14px; 
     }
 }
 nav ul li a {
-    padding: 3px 5px; /* Változtasd meg a padding értékeket */
-    /* További meglévő stílusok... */
+    padding: 3px 5px; 
 }
-
 .images-container {
     display: flex; /* Flexbox beállítása */
     justify-content: center; /* Képek középre igazítása */
     align-items: center; /* Képek függőleges középre igazítása */
     gap: 50px; /* Képek közötti távolság */
-    
 }
-
 .images-container img {
     width: 40%;
     height: auto; /* Arányos magasság beállítása */
@@ -124,43 +106,32 @@ nav ul li a {
     opacity: 0; /* Kezdetben elrejti a képeket */
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
     max-width: 300px;
-    height: auto;
-    width: auto;
 }
-
-
 .logo {
     display: flex;
     justify-content: center; /* Középre igazítás vízszintesen */
     width: 100%; 
     margin-top: 6rem;
     margin-bottom: 0px; 
-    
 }
 .logo img {
     /* max-width: 53%;  */
     height: auto;
     min-width: 200px;
-    max-width: 800px;
-    height: auto;
-    width: auto;
+    max-width: 800px; 
 }
 #services {
     padding: 15px;
-    
     text-align: center;
 }
-
 #services h2 {
     color: #fafafa; /* Címszöveg színe */
     margin-bottom: 15px;
 }
-
 #services ul {
     list-style-type: none; /* Eltávolítja a pontokat a listából */
     padding: 0;
 }
-
 #services li {
     margin-bottom: 10px; /* Kis hely a lista elemek között */
     font-size: 18px; /* A szöveg mérete */
@@ -173,8 +144,6 @@ nav ul li a {
 #services h1 {
     font-size: 20px;
 }
-
-
 .hattersz {
     background: no-repeat center center;
     background-size: cover;
@@ -182,7 +151,6 @@ nav ul li a {
     padding-top: 30px; /* vagy szükség szerinti érték */
     min-height: 100vh;   
 }
-
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -205,8 +173,6 @@ nav ul li a {
         opacity: 1;
     }
 }
-
-
 #about-us {
     min-height: 100vh;
     color: black;
@@ -214,24 +180,8 @@ nav ul li a {
     font-weight: bold;
     margin-bottom: 0px;
     filter: blur(20px); /* Kezdeti homályosítás a szövegre */
-    transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */
-    
+    transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */  
 }
-/* 
- @media (min-width:650px) {
-    #p {
-       
-      font-size: 3.2vw;
-    } 
-} */
-/* @media (max-width: 650px) {
-    #p {
-        font-size: 3.2vw;
-        padding: 5px;
-    }
-} */
-
-
 #about-us h1 {
     text-align: center;
 }
@@ -241,21 +191,17 @@ nav ul li a {
     padding: 1; /* Belső térköz a bekezdés alján */
     font-size: 14px;
   }
-
-
  @media (min-width:650px) {
     #p {
        
       font-size: 25px;
     } 
 }
-
-  /* Kezdeti állapot: nem homályos */
 .body-blur {
     filter: blur(0);
     transition: filter 5s; /* 5 másodperc alatt változik */
 }
-/* Homályos állapot */
+
 .blurred {
     filter: blur(10px); /* vagy bármilyen más érték, amit preferálsz */
 }
@@ -277,39 +223,25 @@ nav ul li a {
     /* ...további stílusok... */
     transition: filter 5s ease-in-out; /* 5 másodpercig tartó elhomályosítás */
 }
-
-
-
 #background-con {
     background: linear-gradient(to bottom right, #4d4d4d, #e6e6e6);
-
 }
-
-
-
 .contact-form div {
     margin-bottom: 1rem;
 }
-
 .contact-form label {
     display: block;
     margin-bottom: 1rem;
 }
-
-
-
 .contact-form button {
     padding: 1rem 1rem;
     background-color: #4d4d4d;
     color: white;
     border: none;
-   
 }
-
 .contact-form button:hover {
     background-color: #333333;
 }
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -321,16 +253,13 @@ nav ul li a {
    font-size:medium;
    max-width: 700px;
 }
-
 .contact-form div {
     margin-bottom: 1rem;
 }
-
 .contact-form label {
     display: block;
     margin-bottom: 1rem;
 }
-
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
@@ -346,7 +275,6 @@ nav ul li a {
 .contact-form textarea{
     height: 10vh;
 }
-
 .contact-form button {
     padding: 1rem 1rem;
     background-color: #4d4d4d;
@@ -356,18 +284,15 @@ nav ul li a {
     width: 100%; /* Teljes szélességű gomb mobil eszközökön */
     box-sizing: border-box;
 }
-
 .contact-form button:hover {
     background-color: #333333;
 }
-
 /* Médialekérdezés kisebb képernyőkhöz */
 @media (max-width: 600px) {
     .contact-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
     }
 }
 .contact-form input, .contact-form textarea {
@@ -376,60 +301,44 @@ nav ul li a {
     /* További stílusok, ha szükséges */
     transition: box-shadow 0.3s ease;
 }
-
 .contact-form input:focus, .contact-form textarea:focus {
     /* Fókuszált mezők árnyékának kiemelése */
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 }
-
-
-
 .privacy-policy label {
     display: inline-block;
     font-size: 19px; /* Szöveg méretének módosítása */
     color: black; /* Szöveg színének módosítása */
     margin-left: 1rem;
 }
-/* policyhez */
 #send {
     border-radius: 10px;
     height: 60px;
     font-size: x-large;
 }
-
 .social-media-section {
     text-align: center;
     margin: 20px 0;
 }
-
 .social-media-icons a {
     margin: 0 10px;
     display: inline-block; /* Az elemek egymás mellett jelenjenek meg */
 }
-
 .social-media-icons img {
     width: 190px; /* Vagy az Ön által kívánt méret */
     height: auto;
 }
-
-
-
 .centered-image {
     display: flex;
     justify-content: center;
     margin-top: 0px; 
     padding: 0px;
 }
-
 .centered-image img {
     width: 50%; /* vagy bármilyen méret, amit szeretnél */
     height: auto; /* megtartja a kép arányait */
     max-width: 30rem;
 }
-
-
-
-
 #mainFooter {
     position: fixed;
     left: 0;
@@ -438,20 +347,16 @@ nav ul li a {
     text-align: left;
     color: rgba(245, 245, 245, 0.521);
 }
-
 #background-con {
     min-height: 100vh;
 }
-
 #agree {
     /* appearance: none; */
     height: 20px;
     width: 20px;
     padding-right: 0;
     margin-right: 0;
-    
     border-radius: 4.5px;
-    
 }
 #myForm{
     padding-top: 3.5rem;
