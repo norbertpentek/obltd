@@ -106,6 +106,8 @@ nav ul li a {
     opacity: 0; 
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
     max-width: 300px;
+    height: 200pxm;
+    width: 800px;
 }
 .logo {
     display: flex;
