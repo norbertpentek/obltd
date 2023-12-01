@@ -37,14 +37,14 @@ setTimeout(function() {
         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
     }
 }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
-    // window.addEventListener('focus', function() {
-    //     setTimeout(function() {
-    //         var form = document.getElementById('myForm');
-    //         if (form) {
-    //             form.reset(); // Törli az űrlapmezőit
-    //         }
-    //     }, 1500);
-    // });
+    window.addEventListener('focus', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlapmezőit
+            }
+        }, 1500);
+    });
 document.addEventListener('DOMContentLoaded', function() {
     // Késleltetés az űrlapmezők törléséhez
     setTimeout(function() {
