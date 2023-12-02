@@ -292,16 +292,16 @@ nav ul li a {
     height: 60px;
     font-size: x-large;
 }
-.facebook-icon {
+.social-media-section {
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
-li.facebook-icon a {
-    margin: 0;
-    
+.social-media-icons a {
+    margin: 0 10px;
+    display: inline-block; /* Az elemek egymás mellett jelenjenek meg */
 }
-.facebook-icon img {
-    width: 18px;
+.social-media-icons img {
+    width: 190px;
     height: auto;
 }
 .centered-image {
@@ -336,4 +336,15 @@ li.facebook-icon a {
 }              
 #hattergallery {                    
     background-color:#4d4d4d;
+}
+.facebook-icon {
+    text-align: center;
+    margin: 10px 0;
+}
+li.facebook-icon a {
+    margin: 0;
+}
+.facebook-icon img {
+    width: 18px;
+    height: auto;
 }
