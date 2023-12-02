@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < listItems.length; i++) {
         listItems[i].style.animationDelay = (i * 0.3) + 's';
     }
+
     // Elmosódás és élesítés kezelése
     setTimeout(function() {
         var background = document.getElementById('about-us-background');
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (aboutUs) {
             aboutUs.style.filter = 'blur(0)';
         }
-    }, 3000); // 3 másodperc után alkalmazza az elmosódást és élesítést
+    }, 400); // 0.5 másodperc után alkalmazza az elmosódást és élesítést
 
     // Elmosódás eltávolítása a navigációs linkek kattintásakor
     var navLinks = document.querySelectorAll('nav a');
@@ -32,14 +33,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })
     // Űrlapkezelés
-    function resetForm() {
+    window.addEventListener('focus', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlapmezőit
+            }
+        }, 500);
+    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Késleltetés az űrlapmezők törléséhez
+    setTimeout(function() {
         var form = document.getElementById('myForm');
         if (form) {
-            form.reset();
+            form.reset(); // Törli az űrlap mezőit
         }
-    }
-    window.addEventListener('focus', resetForm);
-    document.getElementById('send').addEventListener('click', resetForm);
+    }, 250);
+});
+document.getElementById('send').addEventListener('click', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlap mezőit
+            }
+        }, 751); // 2001 ms = 2 másodperc kb
+    });
 });
 // document.addEventListener('DOMContentLoaded', function () {
 //     // Animációs késleltetés a "#services li" elemekre
@@ -70,28 +88,28 @@ document.addEventListener('DOMContentLoaded', function () {
 //         aboutUs.style.filter = 'blur(0)'; // Élesítjük a szöveget
 //     }
 // }, 3); // 3 másodperc után alkalmazza az elmosódást és élesítést
-//     window.addEventListener('focus', function() {
-//         setTimeout(function() {
-//             var form = document.getElementById('myForm');
-//             if (form) {
-//                 form.reset(); // Törli az űrlapmezőit
-//             }
-//         }, 1500);
-//     });
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Késleltetés az űrlapmezők törléséhez
-//     setTimeout(function() {
-//         var form = document.getElementById('myForm');
-//         if (form) {
-//             form.reset(); // Törli az űrlap mezőit
-//         }
-//     }, 1000);
-// });
-// document.getElementById('send').addEventListener('click', function() {
-//         setTimeout(function() {
-//             var form = document.getElementById('myForm');
-//             if (form) {
-//                 form.reset(); // Törli az űrlap mezőit
-//             }
-//         }, 2001); // 2001 ms = 2 másodperc kb
-//     });
+    window.addEventListener('focus', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlapmezőit
+            }
+        }, 1500);
+    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Késleltetés az űrlapmezők törléséhez
+    setTimeout(function() {
+        var form = document.getElementById('myForm');
+        if (form) {
+            form.reset(); // Törli az űrlap mezőit
+        }
+    }, 1000);
+});
+document.getElementById('send').addEventListener('click', function() {
+        setTimeout(function() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset(); // Törli az űrlap mezőit
+            }
+        }, 2001); // 2001 ms = 2 másodperc kb
+    });
