@@ -292,16 +292,16 @@ nav ul li a {
     height: 60px;
     font-size: x-large;
 }
-.social-media-section {
+.facebook-icon {
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
-.social-media-icons a {
-    margin: 0 10px;
-    display: inline-block; /* Az elemek egymás mellett jelenjenek meg */
+li.facebook-icon a {
+    margin: 0;
+    
 }
-.social-media-icons img {
-    width: 190px;
+.facebook-icon img {
+    width: 18px;
     height: auto;
 }
 .centered-image {
