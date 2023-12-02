@@ -114,6 +114,56 @@
 //         }, 2001); // 2001 ms = 2 másodperc kb
 //     });
 
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Animációs késleltetés a "#services li" elemekre
+//     const listItems = document.querySelectorAll('#services li');
+//     for (var i = 0; i < listItems.length; i++) {
+//         listItems[i].style.animationDelay = (i * 0.3) + 's';
+//     }
+
+//     // Elmosódás és élesítés kezelése
+//     setTimeout(function() {
+//         var background = document.getElementById('about-us-background');
+//         var backgroundImage = document.getElementById('background-image');
+//         var aboutUs = document.getElementById('about-us');
+        
+//         if (background) {
+//             background.classList.add('blurred');
+//         }
+//         if (backgroundImage) {
+//             backgroundImage.classList.add('blurred');
+//         }
+//         if (aboutUs) {
+//             aboutUs.style.filter = 'blur(0)';
+//         }
+//     }, 400); // 0.4 másodperc után alkalmazza az elmosódást és élesítést
+
+//     function resetForm() {
+//         var form = document.getElementById('myForm');
+//         if (form) {
+//             form.reset();
+//         }
+//     }
+
+//     // Késleltetés az űrlapmezők törléséhez
+//     setTimeout(resetForm, 250);
+
+//     // Eseménykezelő a 'send' gombra
+//     document.getElementById('send').addEventListener('click', function() {
+//         setTimeout(resetForm, 750);
+//     });
+
+//     // Eseménykezelő az ablak fókuszálására
+//     window.addEventListener('focus', function() {
+//         setTimeout(resetForm, 500);
+//     });
+// });
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Animációs késleltetés a "#services li" elemekre
     const listItems = document.querySelectorAll('#services li');
@@ -138,18 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 400); // 0.4 másodperc után alkalmazza az elmosódást és élesítést
 
-    // Elmosódás eltávolítása a navigációs linkek kattintásakor
-    var navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            var background = document.getElementById('about-us-background');
-            if (background) {
-                background.classList.remove('blurred');
-            }
-        });
-    });
-
-    // Űrlapkezelés központosítása
     function resetForm() {
         var form = document.getElementById('myForm');
         if (form) {

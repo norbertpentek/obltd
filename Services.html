@@ -61,6 +61,24 @@
             <li>-Pest control</li>
         </ul>
     </section>
-    <script src="/script3.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const listItems = document.querySelectorAll('#services li');
+        for (var i = 0; i < listItems.length; i++) {
+            listItems[i].style.animationDelay = (i * 0.3) + 's';
+        }
+        setTimeout(function() {
+            var background = document.getElementById('about-us-background');
+            var backgroundImage = document.getElementById('background-image');
+            if (background) {
+                background.classList.add('blurred');
+            }
+            if (backgroundImage) {
+                backgroundImage.classList.add('blurred');
+            }
+            if (aboutUs) {
+                aboutUs.style.filter = 'blur(0)';
+            }
+        }, 400); // 0.4 másodperc után alkalmazza az elmosódást és élesítést
+    });</script>
 </body>
 </html>

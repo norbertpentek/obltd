@@ -64,6 +64,24 @@
         </div>
     </div>
     </form>
-    <script src="/script3.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        function resetForm() {
+            var form = document.getElementById('myForm');
+            if (form) {
+                form.reset();
+            }
+        }
+    
+        setTimeout(resetForm, 250);
+    
+        document.getElementById('send').addEventListener('click', function() {
+            setTimeout(resetForm, 750);
+        });
+    
+        window.addEventListener('focus', function() {
+            setTimeout(resetForm, 500);
+        });
+    });
+    </script>
 </body>
 </html>
