@@ -339,6 +339,8 @@ nav ul li a {
     background-color:#4d4d4d;
 }
 .facebook-icon {
+    display: flex;
+    align-items: center;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -363,8 +365,4 @@ a.facebook-icon  {
 a{
     padding: 0;
     margin: 0;
-}
-.facebook-icon {
-    display: flex;
-    align-items: center;
 }
