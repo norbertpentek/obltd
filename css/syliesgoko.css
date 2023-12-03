@@ -94,6 +94,7 @@ nav ul li a {
     justify-content: center; 
     align-items: center; /* Képek függőleges középre igazítása */
     gap: 50px; 
+    padding-top: 200px;
 }
 .images-container img {
     width: 40%;
