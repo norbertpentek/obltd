@@ -88,6 +88,9 @@ nav ul li a {
 nav ul li a {
     padding: 3px 0px; 
 }
+#phonemail {
+border-left: 1px solid white;
+}
 .images-container {
     display: flex; 
     justify-content: center; 
