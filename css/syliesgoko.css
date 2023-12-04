@@ -61,7 +61,6 @@ nav ul {
 }
     nav a {
         font-size: calc(1vw + 1vh + 0.1vmin);
-        
     }
 nav li {
     flex: 1;
@@ -79,7 +78,7 @@ nav, #nav1 {
     height:auto;
 }
 nav ul li a {
-    font-size: 16px;
+    font-size: 20px;
 }
 @media (max-width: 600px) {
     nav ul li a {
@@ -87,7 +86,7 @@ nav ul li a {
     }
 }
 nav ul li a {
-    padding: 3px 5px; 
+    padding: 3px 0px; 
 }
 .images-container {
     display: flex; 
