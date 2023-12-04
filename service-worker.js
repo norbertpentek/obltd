@@ -2,7 +2,7 @@ const CACHE_NAME = 'static-cache-v1';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   '/css/sylesgoko.css',
-  '/sylesgoko.css',
+  '/stylesgoko.css',
   '/stylesgallery.css',
   '/kepek/ht.webp',
   '/kepek/kepgoco.webp',
