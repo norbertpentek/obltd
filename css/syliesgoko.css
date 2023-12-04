@@ -344,13 +344,13 @@ nav ul li a {
     text-align: center;
     margin: 0;
     padding: 0;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
     
 }
 li.facebook-icon a {
     margin: 0;
     padding: 0;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
 }
 .facebook-icon img {
     height: 24px;
