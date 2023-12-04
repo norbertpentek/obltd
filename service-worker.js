@@ -1,8 +1,27 @@
 const CACHE_NAME = 'static-cache-v1';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
-  '/css/styles.css',
-  '/images/logo.png',
+  '/css/sylesgoko.css',
+  '/sylesgoko.css',
+  '/stylesgallery.css',
+  '/kepek/ht.webp',
+  '/kepek/kepgoco.webp',
+  '/kepek/kep goko logo.webp',
+  '/kepek/mybuilder.webp',
+  '/kepek/fb22.webp',
+  '/kepek/bark.webp',
+  '/kepek/checkatrade.webp',
+  '/kepek/daomodd.webp',
+  '/kepek/davidottoo.webp',
+  '/kepek/htvilagos.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/1.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/2.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/3.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/4.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/5.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/6.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/7.webp',
+  '/kepek/Projects Gallery/Back & Side Extension3/8.webp',
   // Include additional static assets
 ];
 
