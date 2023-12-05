@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/stylesgallery.css',
   '/kepek/ht.webp',
   '/kepek/kepgoco.webp',
-  '/kepek/kep goko logo.webp',
+  '/kepek/kep goko logo1.webp',
   '/kepek/mybuilder.webp',
   '/kepek/fb22.webp',
   '/kepek/bark.webp',
