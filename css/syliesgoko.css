@@ -112,13 +112,12 @@ border-left: 1px solid white;
 }
 .logo {
     display: flex;
-    justify-content: center; /* Középre igazítás vízszintesen */
-    /* width: 100%;  */
+    justify-content: center; 
+    width: 100%;
     margin-top: 6rem;
     margin-bottom: 0px; 
     height: auto;
-    min-width: 200px;
-    max-width: 800px; 
+    padding-top: 10px;
 }
 .logo img {
     height: auto;
