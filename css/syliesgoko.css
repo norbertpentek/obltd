@@ -109,19 +109,16 @@ border-left: 1px solid white;
     opacity: 0; 
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
     max-width: 300px;
-    width: 100px;
-    height: 100px;
 }
 .logo {
     display: flex;
     justify-content: center; 
-    width: 100%;
+    max-width: 800px;
     margin-top: 6rem;
     margin-bottom: 0px; 
     height: auto;
-    padding-top: 10px;
-    width: 200px;
-    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo img {
     height: auto;
