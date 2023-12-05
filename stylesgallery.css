@@ -99,7 +99,7 @@ nav ul li a {
         padding: 0 3px;
     }
 }
-.facebook-icon {
+/* .facebook-icon {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -121,11 +121,11 @@ a.facebook-icon  {
     margin: 0;
     padding: 0;
 }
-a{
-    padding: 0;
-    margin: 0;
-}
 .facebook-icon {
     display: flex;
     align-items: center;
+} */
+a{
+    padding: 0;
+    margin: 0;
 }
