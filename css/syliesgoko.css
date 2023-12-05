@@ -109,6 +109,8 @@ border-left: 1px solid white;
     opacity: 0; 
     transform: translateX(-100%); /* Eltolja őket balra (az első kép esetében) */
     max-width: 300px;
+    width: 100px;
+    height: 100px;
 }
 .logo {
     display: flex;
@@ -118,6 +120,8 @@ border-left: 1px solid white;
     margin-bottom: 0px; 
     height: auto;
     padding-top: 10px;
+    width: 200px;
+    height: 100px;
 }
 .logo img {
     height: auto;
