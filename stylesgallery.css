@@ -53,22 +53,22 @@ nav, #nav1 {
     height:auto;
 }
 nav ul li a {
-    font-size: 16px; /* Alapértelmezett betűméret */
+    font-size: 20px; /* Alapértelmezett betűméret */
     /* További meglévő stílusok... */
 }
 /* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 14px; /* Minimum betűméret */
+        font-size: 17px; /* Minimum betűméret */
     }
 }
 nav ul li a {
-    padding: 3px 5px; /* Változtasd meg a padding értékeket */
+    padding: 3px 3px; /* Változtasd meg a padding értékeket */
     /* További meglévő stílusok... */
 }
 #bodygallery {
     margin: 0;
-    padding: 0 10px;
+    padding: 0px 10px;
     overflow-y: auto; /* Engedélyezi a függőleges görgetést */
     background-color: black;
 }

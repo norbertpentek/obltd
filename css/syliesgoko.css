@@ -82,11 +82,11 @@ nav ul li a {
 }
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 12px; 
+        font-size: 17px; 
     }
 }
 nav ul li a {
-    padding: 3px 5px; 
+    padding: 3px 3px; 
 }
 #phonemail {
 border-left: 1px solid white;
