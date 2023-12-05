@@ -3,41 +3,38 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333; /* Háttérszín beállítása */
+    background-color: #333;  
 }
 nav ul li {
     float: left;
 }
 nav ul li a {
     display: block;
-    color: rgba(255, 255, 255, 0.688); /* Szöveg színe */
+    color: rgba(255, 255, 255, 0.688);  
     text-align: center;
-    padding: 14px 16px; /* Padding a menüpontok között */
+    padding: 14px 16px;  
     text-decoration: none;
 }
 nav ul li a:hover {
-    /* background-color: #111;  */
-    color: white; /* Világosabb szín a kiemeléshez */
-    text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
+    color: white; 
+    text-decoration: underline;  
     background-color: transparent;
 }
-
 nav div img {
-    max-height: 400px; /* Állítsd be a kép maximális magasságát */
-    vertical-align: middle; /* Középre igazítás */
+    max-height: 400px;  
+    vertical-align: middle;  
 }
 nav ul {
     display: flex;
     justify-content: flex-start;
-    align-items: center; /* Új sor a függőleges középre igazításhoz */
-    height: 100%; /* Új sor a teljes magasság beállításához */
+    align-items: center;  
+    height: 100%;  
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
     nav a {
         font-size: calc(1vw + 1vh + 0.1vmin);
-        
     }
 nav li {
     flex: 1;
@@ -46,28 +43,24 @@ nav, #nav1 {
     display: flex;
     flex-wrap: nowrap;
     overflow-x:auto;
-    position: fixed; /* Rögzített pozíció */
-    top: 0; /* A képernyő tetejére helyezi */
-    left: 0; /* A képernyő bal oldalára helyezi */
-    width: 100%; /* Teljes szélesség */
-    z-index: 1000; /* Biztosítja, hogy a menü a többi tartalom felett jelenjen meg */
-    background-color: #333; /* Háttérszín beállítása */
+    position: fixed; 
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    z-index: 1000;  
+    background-color: #333;  
     height:auto;
 }
 nav ul li a {
-    font-size: 16px; /* Alapértelmezett betűméret */
-    /* További meglévő stílusok... */
+    font-size: 16px;  
 }
-
-/* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 14px; /* Minimum betűméret */
+        font-size: 14px;  
     }
 }
 nav ul li a {
-    padding: 3px 5px; /* Változtasd meg a padding értékeket */
-    /* További meglévő stílusok... */
+    padding: 3px 5px;  
 }
 #bodygallery {
     margin: 0;
@@ -141,7 +134,7 @@ a{
     padding: 0;
     margin: 0;
 }
-.facebook-icon {
+/* .facebook-icon {
     display: flex;
     align-items: center;
-}
+} */

@@ -29,7 +29,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333; /* Háttérszín beállítása */
+    background-color: #333;  
 }
 nav ul li {
     float: left;
@@ -38,22 +38,22 @@ nav ul li a {
     display: block;
     color: rgba(255, 255, 255, 0.688); 
     text-align: center;
-    
+    padding: 14px 16px;  
     text-decoration: none;
 }
 nav ul li a:hover {
     color: white; 
-    text-decoration: underline; /* Vagy 'none', ha nem szeretnél aláhúzást */
+    text-decoration: underline;  
     background-color: transparent;
 }
 nav div img {
     max-height: 400px; 
-    vertical-align: middle; /* Középre igazítás */
+    vertical-align: middle;  
 }
 nav ul {
     display: flex;
     justify-content: flex-start;
-    align-items: center; /* Új sor a függőleges középre igazításhoz */
+    align-items: center;  
     height: 100%; 
     list-style-type: none;
     margin: 0;
@@ -86,7 +86,7 @@ nav ul li a {
     }
 }
 nav ul li a {
-    padding: 3px 3px;  
+    padding: 3px 5px;  
 }
 /*
 #phonemail {
