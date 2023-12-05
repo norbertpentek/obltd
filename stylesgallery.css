@@ -53,13 +53,13 @@ nav, #nav1 {
     height:auto;
 }
 nav ul li a {
-    font-size: 20px; /* Alapértelmezett betűméret */
+    font-size: 16px; /* Alapértelmezett betűméret */
     /* További meglévő stílusok... */
 }
 /* Médialekérdezés kisebb képernyőméretekhez */
 @media (max-width: 600px) {
     nav ul li a {
-        font-size: 17px; /* Minimum betűméret */
+        font-size: 14px; /* Minimum betűméret */
     }
 }
 nav ul li a {
