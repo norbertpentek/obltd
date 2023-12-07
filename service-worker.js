@@ -1,7 +1,7 @@
-const CACHE_NAME = 'static-cache-v1.9';
+const CACHE_NAME = 'static-cache-v1.10';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
-  '/video/mesure5.webm',
+  '/video/mesure5.mp4',
   '/css/syliesgoko.css',
   '/stylesgoko.css',
   '/stylesgallery.css',
