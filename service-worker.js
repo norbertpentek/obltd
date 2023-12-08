@@ -44,7 +44,6 @@ const STATIC_ASSETS = [
   '/kepek/Projects Gallery/Back & Side Extension/19.webp',
   '/kepek/Projects Gallery/Back & Side Extension/20.webp',
   '/script.js',
-  '/script3.js',
   // Include additional static assets
 ];
 
