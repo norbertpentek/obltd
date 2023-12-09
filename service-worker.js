@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v1.17';
+const CACHE_NAME = 'static-cache-v1.18';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   '/video/mesure5.mp4',
