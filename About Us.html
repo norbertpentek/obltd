@@ -41,7 +41,7 @@
     </section>
     <footer>
     </footer>
-    <script>document.addEventListener('DOMContentLoaded', function () {
+    <!-- <script>document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             var background = document.getElementById('about-us-background');
             var backgroundImage = document.getElementById('background-image');
@@ -55,7 +55,22 @@
             if (aboutUs) {
                 aboutUs.style.filter = 'blur(0)';
             }
-        }, 140); // 0.14 másodperc után alkalmazza az elmosódást és élesítést
-    });</script>
+        }, 0.1); // 0.14 másodperc után alkalmazza az elmosódást és élesítést
+    });</script> -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+            var background = document.getElementById('background-image');
+            var aboutUs = document.getElementById('about-us');
+    
+            if (background) {
+                background.style.filter = 'blur(10px)'; // Homályosítja a hátteret
+            }
+            if (aboutUs) {
+                aboutUs.style.filter = 'blur(0)'; // Élesíti a szöveget
+            }
+        }, 1); // 100 milliszekundum késleltetés
+    });
+</script>
 </body>
 </html>

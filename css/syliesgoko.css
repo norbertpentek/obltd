@@ -193,8 +193,8 @@ border-left: 1px solid white;
     padding: 0px 5px;
     font-weight: bold;
     margin-bottom: 0px;
-    filter: blur(20px); /* Kezdeti homályosítás a szövegre */
-    transition: filter 4s ease-in-out; /* Tranzíció az élesítéshez */  
+    filter: blur(10px); /* Kezdetben homályos */
+    transition: filter 1s ease-in-out;
 }
 #about-us h1 {
     text-align: center;
@@ -211,14 +211,6 @@ border-left: 1px solid white;
       font-size: 25px;
     } 
 }
-.body-blur {
-    filter: blur(0);
-    transition: filter 2s; /* 5 másodperc alatt változik */
-}
-
-.blurred {
-    filter: blur(10px); 
-}
 #background-image {
     position: fixed;
     top: 0;
@@ -228,10 +220,8 @@ border-left: 1px solid white;
     background-size: cover;
     background-position: center;
     z-index: -1; 
-    transition: filter 2s ease-in-out;
-}
-#background-image.blurred { /* Homályosítás kezdő állapota */
-    filter: blur(10px);
+    filter: blur(0); /* Kezdetben nincs homályosítás */
+    transition: filter 1s ease-in-out;
 }
 #background-con {
     background: linear-gradient(to bottom right, #4d4d4d, #e6e6e6);
