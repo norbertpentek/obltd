@@ -10,7 +10,6 @@ window.onload = function() {
         rightImage.style.animation = `slideInFromRight 2s ease-out ${slideInDelay}ms forwards`;
     }
 };
-
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/service-worker.js')

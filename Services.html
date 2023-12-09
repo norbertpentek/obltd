@@ -18,7 +18,7 @@
   gtag('config', 'G-NK2SWTH5XX');
 </script> -->
 <body class="hattersz">
-    <div id="background-image" style="background-image: url('/kepek/ht.webp');"></div>
+    <div id="background-images" style="background-image: url('/kepek/ht.webp');"></div>
     </div>
     <nav>
         <ul>
@@ -69,6 +69,11 @@
         setTimeout(function() {
             var background = document.getElementById('about-us-background');
             var backgroundImage = document.getElementById('background-image');
+            var backgroundImage = document.getElementById('background-images');
+
+if (backgroundImage) {
+    backgroundImage.style.filter = 'blur(10px)'; // Homályosítás alkalmazása
+}
             if (background) {
                 background.classList.add('blurred');
             }
