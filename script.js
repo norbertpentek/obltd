@@ -1,3 +1,28 @@
+
+// Ez a függvény kapcsolja a 'show' osztályt, ami befolyásolja a menü megjelenítését
+function toggleDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+  
+// Ha a felhasználó az oldal egy másik részére kattint, rejtse el a legördülő menüt
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+};
+
+document.querySelector('.dropbtn img').addEventListener('click', function(event) {
+  toggleDropdown();
+  event.stopPropagation(); // Megakadályozza, hogy az esemény továbbterjedjen
+});
+
+
 window.onload = function() {
     // Smooth scroll és egyéb kódok...
 
