@@ -299,9 +299,13 @@ border-left: 1px solid white;
     /* Fókuszált mezők árnyékának kiemelése */
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 }
+.privacy-policy {
+    appearance: none;
+}
 .privacy-policy label {
+    
     display: inline-block;
-    font-size: 19px; 
+    font-size: large; 
     color: black; 
     margin-left: 1rem;
 }
@@ -351,6 +355,7 @@ border-left: 1px solid white;
 }
 #myForm{
     padding-top: 3.5rem;
+    appearance: none;
 }              
 #hattergallery {                    
     background-color:#4d4d4d;
