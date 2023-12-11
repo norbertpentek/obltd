@@ -1,9 +1,7 @@
-
 // Ez a függvény kapcsolja a 'show' osztályt, ami befolyásolja a menü megjelenítését
 function toggleDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-  
 // Ha a felhasználó az oldal egy másik részére kattint, rejtse el a legördülő menüt
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -16,7 +14,6 @@ window.onclick = function(event) {
     }
   }
 };
-
 document.querySelector('.dropbtn img').addEventListener('click', function(event) {
   toggleDropdown();
   event.stopPropagation(); // Megakadályozza, hogy az esemény továbbterjedjen
