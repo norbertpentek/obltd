@@ -362,6 +362,7 @@ border-left: 1px solid white;
 }
   .facebook-icon {
     display: flex;
+    padding: 0;     /* !!!*/
     justify-content: space-between;
     height: 40px;
     margin: 50px 10px auto 10px;
@@ -372,7 +373,6 @@ border-left: 1px solid white;
     margin: 0;
     padding: 0;
     height:30px;
-    max-width: 100%; /*!!!*/
 } 
 /* Dropdown Button stílusok */
 .dropbtn {
