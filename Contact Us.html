@@ -81,5 +81,13 @@
         });
     });
     </script>
+    <script>document.getElementById("myForm").addEventListener("submit", function(event){
+        var checkBox = document.getElementById("agree");
+        if (!checkBox.checked) {
+            alert("Please accept the terms and conditions.");
+            event.preventDefault();
+        }
+    });
+    </script>
 </body>
 </html>
