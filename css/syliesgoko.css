@@ -365,12 +365,14 @@ border-left: 1px solid white;
     justify-content: space-between;
     height: 40px;
     margin: 50px 10px auto 10px;
+    max-width: 100%;    /* !!!*/
     
 }
 .facebook-icon img  {
     margin: 0;
     padding: 0;
     height:30px;
+    max-width: 100%; /*!!!*/
 } 
 /* Dropdown Button stílusok */
 .dropbtn {
