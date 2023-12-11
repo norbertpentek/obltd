@@ -118,7 +118,6 @@ border-left: 1px solid white;
 .logo {
     display: flex;
     justify-content: center; 
-    max-width: 800px;
     margin-top: 0;
     margin-bottom: 0px; 
     height: auto;
@@ -126,12 +125,11 @@ border-left: 1px solid white;
     margin-right: auto;
     padding: 0 10px 0 10px;
     min-width: 200px;
-    max-width: 800px; 
+ 
 }
 .logo img {
     height: auto;
-    min-width: 200px;
-    max-width: 800px; 
+    min-width: 200px; 
 }
 #services {
     padding: 15px;
