@@ -259,7 +259,7 @@ border-left: 1px solid white;
 }
 .contact-form label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 2px;
 }
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -316,7 +316,7 @@ border-left: 1px solid white;
 }
 .social-media-section {
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
 }
 .social-media-icons a {
     margin: 0 10px;
