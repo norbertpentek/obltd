@@ -125,11 +125,12 @@ border-left: 1px solid white;
     margin-right: auto;
     padding: 0 10px 0 10px;
     min-width: 200px;
- 
+    max-width: 477px;
 }
 .logo img {
     height: auto;
     min-width: 200px; 
+    max-width: 477px;
 }
 #services {
     padding: 15px;
