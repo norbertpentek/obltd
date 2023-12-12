@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v1.90';
+const CACHE_NAME = 'static-cache-v1.92';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   '/video/mesure5.mp4',
@@ -7,7 +7,7 @@ const STATIC_ASSETS = [
   '/stylesgallery.css',
   '/kepek/ht.webp',
   '/kepek/kepgoco.webp',
-  '/kepek/kep goko logo2.webp',
+  '/kepek/logo2.webp',
   '/kepek/mybuilder.webp',
   '/kepek/fb22.webp',
   '/kepek/bark.webp',
