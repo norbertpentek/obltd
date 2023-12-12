@@ -280,7 +280,7 @@ border-left: 1px solid white;
     background-color: #4d4d4d;
     color: white;
     border: none;
-    width: 100%; /* Teljes szélességű gomb mobil eszközökön */
+    width: 30%; /* Teljes szélességű gomb mobil eszközökön */
     box-sizing: border-box;
 }
 @media (max-width: 600px) {
@@ -361,12 +361,11 @@ border-left: 1px solid white;
 }
   .facebook-icon {
     display: flex;
-    padding: 0;     /* !!!*/
+    padding: 0;     
     justify-content: space-between;
     height: 40px;
     margin: 50px 10px auto 10px;
-    max-width: 100%;    /* !!!*/
-    
+    max-width: 100%;   
 }
 .facebook-icon img  {
     margin: 0;
