@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v1.85';
+const CACHE_NAME = 'static-cache-v1.86';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   '/video/mesure5.mp4',
@@ -68,9 +68,21 @@ self.addEventListener('activate', event => {
   );
 });
 // Fetch event - serving up the static files (if in cache)
-self.addEventListener('fetch', event => {
+//  self.addEventListener('fetch', event => {
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(response => response || fetch(event.request))
+//   );});
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
+    caches.open('my-cache-name').then(function(cache) {
+      return cache.match(event.request).then(function(response) {
+        return response || fetch(event.request).then(function(networkResponse) {
+          cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        });
+      });
+    })
   );
 });
+
