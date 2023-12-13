@@ -1,9 +1,8 @@
-const CACHE_NAME = 'static-cache-v2';
+const CACHE_NAME = 'static-cache-v3.7';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   '/video/mesure5.mp4',
   '/css/syliesgoko.css',
-  '/script.js',
   '/stylesgoko.css',
   '/stylesgallery.css',
   '/kepek/ht.webp',
@@ -44,6 +43,7 @@ const STATIC_ASSETS = [
   '/kepek/Projects Gallery/Back & Side Extension/18.webp',
   '/kepek/Projects Gallery/Back & Side Extension/19.webp',
   '/kepek/Projects Gallery/Back & Side Extension/20.webp',
+  '/script.js',
   // Include additional static assets
 ];
 // Install event - caching static assets
