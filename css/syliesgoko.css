@@ -3,7 +3,7 @@ body, html {
     padding: 0rem;
 }
 header {
-    background-color: rgba(0, 0, 0, 0.119);
+    background-color: rgba(0, 0, 0, 0.296);
 }
 #hatterkepgoko {
 width: 100%;
@@ -465,7 +465,7 @@ p {
     border-radius: 15px;
     border: solid 1px black;
     max-height: 300px;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.8s ease;
 }
 .galleryContactUs img:hover {
