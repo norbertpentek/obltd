@@ -32,9 +32,9 @@ window.onload = function() {
         rightImage.style.animation = `slideInFromRight 2s ease-out ${slideInDelay}ms forwards`;
     }
 };
-if ('serviceWorker' in navigator) {
+if ('serviceWorker1' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker1.register('/service-worker1.js')
+      navigator.serviceWorker1.register('/serviceworker1.js')
         .then(reg => {
           console.log('Service worker registered.', reg);
         });
