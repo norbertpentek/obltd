@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v3.9';
+const CACHE_NAME = 'static-cache-v4.1';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
     '/index.html',
