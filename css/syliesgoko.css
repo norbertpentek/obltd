@@ -357,9 +357,12 @@ nav ul li a {
     margin-left: 1rem;
 }
 #send {
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
-    height: 60px;
-    font-size: x-large;
+    height: 50px;
+    font-size: large;
+    text-align: center;
 }
 .social-media-section {
     text-align: center;
