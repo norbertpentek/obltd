@@ -1,9 +1,9 @@
-const CACHE_NAME = 'static-cache-v5';
+const CACHE_NAME = 'static-cache-v5.1';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
     '/index.html',
     '/video/szeles2.mp4',
-    '/css/syliesgoko.css?v=1',
+    '/css/syliesgoko.css?v=1.1',
     '/kepek/ht.webp',
     '/kepek/kepgoco.webp',
     '/kepek/logo2.webp',
