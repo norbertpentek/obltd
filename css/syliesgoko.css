@@ -131,10 +131,6 @@ nav ul li a {
     animation: slideInFromRight 1s ease-out forwards;
 }
 .centered-image {
-    position: fixed;
-    z-index: 15;
-    top: 30px;
-    width: 30vw;
     display: flex; 
     justify-content: center; 
     align-items: center; /* Képek függőleges középre igazítása */
@@ -152,14 +148,9 @@ nav ul li a {
      padding: 0px;
      margin-top: 20px;
      border-radius: 5px;
-     /* animation: none;
-     opacity: 0; 
-     transform: translateX(-100%); Eltolja őket balra (az első kép esetében); */
-     animation: slideInFromLeft 1s ease-out forwards;
      min-width: 10px;
      max-width: 1800px; 
 }
-
 .logo {
     display: flex;
     justify-content: center; 
@@ -460,10 +451,11 @@ p {
     display: flex;
     justify-content: center;
     max-height: 200px;
+    
 }
 .galleryContactUs img {
     height: 30vw;
-    width: 30vw;
+    width: auto;
     margin:10px;
     border-radius: 15px;
     border: solid 1px black;
