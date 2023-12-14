@@ -34,7 +34,7 @@ window.onload = function() {
 };
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker1.js')
+      navigator.serviceWorker1.register('/service-worker1.js')
         .then(reg => {
           console.log('Service worker registered.', reg);
         });

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v4.3';
+const CACHE_NAME = 'static-cache-v4.5';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
     '/index.html',
@@ -46,11 +46,16 @@ const STATIC_ASSETS = [
 ];
 
 // Install event - caching static assets
-self.addEventListener('install', event => {
+self.addEventListener('install', function(event) {
+  // Itt vannak az erőforrások cache-elési logikái
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(STATIC_ASSETS))
+      .then(function(cache) {
+        return cache.addAll(STATIC_ASSETS);
+      })
   );
+  // Skip waiting parancs
+  self.skipWaiting();
 });
 
 // Activate event - cleaning up old caches
