@@ -4,6 +4,7 @@ body, html {
 }
 header {
     background-color: rgba(0, 0, 0, 0.296);
+    padding-top: 20px;
 }
 #hatterkepgoko {
 width: 100%;
@@ -396,7 +397,7 @@ nav ul li a {
     padding: 0;     
     justify-content: space-between;
     height: 40px;
-    margin: 50px 10px auto 10px;
+    margin: 50px 30px auto 30px;
     max-width: 100%;   
 }
 .facebook-icon img  {
