@@ -250,6 +250,7 @@ nav ul li a {
       font-size: 20px;
     } 
 }
+
 #background-image {
     position: fixed;
     top: 0;
@@ -470,3 +471,7 @@ p {
     display: flex;
     justify-content: center;
 }
+ @media (max-width:650px) {
+    #services h1 {font-size: small;}
+    #servicesList li {font-size: 12px;
+    }}
