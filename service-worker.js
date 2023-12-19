@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v8.7';
+const CACHE_NAME = 'static-cache-v8.8';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
      '/css/syliesgoko.css',
@@ -71,18 +71,61 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event - serving up the static files (if in cache)
 self.addEventListener('fetch', function(event) {
+  // Csak GET kérések gyorsítótárazása
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
     caches.match(event.request)
-      .then(response => response || fetch(event.request).then(function(networkResponse) {
-        return caches.open(CACHE_NAME).then(function(cache) {
-          cache.put(event.request, networkResponse.clone());
+      .then(response => {
+        // Ha van gyorsítótárazott válasz, adjuk vissza azt
+        if (response) {
+          return response;
+        }
+
+        return fetch(event.request).then(function(networkResponse) {
+          // Ellenőrizd, hogy a válasz nem részleges-e (206-os válaszok kizárása)
+          if (!networkResponse || networkResponse.status === 206 || networkResponse.type !== 'basic') {
+            return networkResponse;
+          }
+
+          // Másold és tárold a választ a gyorsítótárban
+          var responseToCache = networkResponse.clone();
+
+          caches.open(CACHE_NAME).then(function(cache) {
+            cache.put(event.request, responseToCache);
+          });
+
           return networkResponse;
         });
-      }))
+      })
+      .catch(error => {
+        console.error('Fetching failed:', error);
+        throw error;
+      })
   );
 });
+
+
+
+
+
+
+// // Fetch event - serving up the static files (if in cache)
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(response => response || fetch(event.request).then(function(networkResponse) {
+//         return caches.open(CACHE_NAME).then(function(cache) {
+//           cache.put(event.request, networkResponse.clone());
+//           return networkResponse;
+//         });
+//       }))
+//   );
+// });
+
+
+
 
 // const CACHE_NAME = 'static-cache-v3.6';
 // const STATIC_ASSETS = [
