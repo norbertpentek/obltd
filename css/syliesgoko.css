@@ -433,7 +433,7 @@ nav ul li a {
     border-radius: 10px;
   }
   /* Dropdown linkek stílusai hover esetén */
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #dddddd38;}
   .dropdown-content.show {
     display: block;
     border-radius: 10px;
@@ -441,8 +441,14 @@ nav ul li a {
 .dropdown {
 position: relative;
 }
+.dropdown p{
+    color: lightgray;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    }
+
 p {
-    color: rgb(38, 38, 71);
+    color: rgb(2, 2, 3);
     margin-left: 5px;
 }
 .galleryContactUs {
