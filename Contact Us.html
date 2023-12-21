@@ -69,63 +69,72 @@
         });
     });
     </script>
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var form = document.getElementById('myForm');
-      var sendButton = document.getElementById('send');
-      var nameInput = document.getElementById('name');
-      var emailInput = document.getElementById('email');
-      var messageTextarea = document.getElementById('message');
-      var agreeCheckbox = document.getElementById('agree');
-  
-      function updateButtonState() {
-        sendButton.disabled = !(
-          nameInput.value.trim() !== '' &&
-          emailInput.checkValidity() &&
-          messageTextarea.value.trim() !== '' &&
-          agreeCheckbox.checked
-        );
-      }
-  
-      function showMissingFields() {
-        var missingFields = [];
-        if(nameInput.value.trim() === '') {
-          missingFields.push('Name');
-        }
-        if(!emailInput.checkValidity()) {
-          missingFields.push('Email Address');
-        }
-        if(messageTextarea.value.trim() === '') {
-          missingFields.push('Message');
-        }
-        if(!agreeCheckbox.checked) {
-          missingFields.push('Acceptance of the Privacy Policy');
-        }
-  
-        if(missingFields.length > 0) {
-          alert('Please fill out the following fields: ' + missingFields.join(', '));
-        }
-      }
-  
-      // Ellenőrizd a mezőket minden változáskor
-      form.addEventListener('input', updateButtonState);
-      form.addEventListener('change', updateButtonState);
-  
-      // Küldés gomb eseménykezelője
-      sendButton.addEventListener('click', function(event) {
-        if(sendButton.disabled) {
-          showMissingFields();
-          event.preventDefault();
-        }
-      });
-  
-      // Kezdeti állapot a gomb letiltása
-      updateButtonState();
-    });
-  </script>
-  
     
-   
+      <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('myForm');
+    var sendButton = document.getElementById('send');
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var messageTextarea = document.getElementById('message');
+    var agreeCheckbox = document.getElementById('agree');
+
+    function updateButtonState() {
+      sendButton.disabled = !(
+        nameInput.value.trim() !== '' &&
+        emailInput.checkValidity() &&
+        messageTextarea.value.trim() !== '' &&
+        agreeCheckbox.checked
+      );
+    }
+
+    // function showMissingFields() {
+    //   var missingFields = [];
+    //   if(nameInput.value.trim() === '') {
+    //     missingFields.push('Name');
+    //   }
+    //   if(!emailInput.checkValidity()) {
+    //     missingFields.push('Email Address');
+    //   }
+    //   if(messageTextarea.value.trim() === '') {
+    //     missingFields.push('Message');
+    //   }
+    //   if(!agreeCheckbox.checked) {
+    //     missingFields.push('Acceptance of the Privacy Policy');
+    //   }
+
+    //   if(missingFields.length > 0) {
+    //     alert('Please fill out the following fields: ' + missingFields.join(', '));
+    //   }
+    // }
+
+    // Ellenőrizd a mezőket minden változáskor
+    // form.addEventListener('input', updateButtonState);
+    // form.addEventListener('change', updateButtonState);
+
+    // // Küldés gomb eseménykezelője
+    // sendButton.addEventListener('click', function(event) {
+    //   if(sendButton.disabled) {
+    //     showMissingFields();
+    //     event.preventDefault();
+    //   }
+    // });
+
+    // Kezdeti állapot a gomb letiltása
+    updateButtonState();
+  });
+</script>
+
+
+<!-- <script>
+document.getElementById("myForm").addEventListener("submit", function(event){
+    var checkBox = document.getElementById("agree");
+    if (!checkBox.checked) {
+        alert("Please accept the terms and conditions.");
+        event.preventDefault();
+    }
+});
+</script> -->
 
       
     <script>
