@@ -78,6 +78,33 @@
     });
     </script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var form = document.getElementById('myForm');
+          var sendButton = document.getElementById('send');
+          var nameInput = document.getElementById('name');
+          var emailInput = document.getElementById('email');
+          var messageTextarea = document.getElementById('message');
+          var agreeCheckbox = document.getElementById('agree');
+      
+          function updateButtonState() {
+            sendButton.disabled = !(
+              nameInput.value.trim() !== '' &&
+              emailInput.checkValidity() &&
+              messageTextarea.value.trim() !== '' &&
+              agreeCheckbox.checked
+            );
+          }
+      
+          // Ellenőrizd a mezőket minden változáskor
+          form.addEventListener('input', updateButtonState);
+          form.addEventListener('change', updateButtonState);
+      
+          // Kezdeti állapot a gomb letiltása
+          updateButtonState();
+        });
+      </script>
+      
+    <script>
         window.addEventListener('load', function() {
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
