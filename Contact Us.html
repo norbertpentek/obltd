@@ -104,8 +104,49 @@
         }
     });
     </script>
-    
-      
+          <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('myForm');
+  var sendButton = document.getElementById('send');
+  var nameInput = document.getElementById('name');
+  var emailInput = document.getElementById('email');
+  var messageTextarea = document.getElementById('message');
+  var agreeCheckbox = document.getElementById('agree');
+
+  var nameWarning = document.createElement('span');
+  var emailWarning = document.createElement('span');
+  var messageWarning = document.createElement('span');
+  var agreeWarning = document.createElement('span');
+
+  nameWarning.style.color = 'red';
+  emailWarning.style.color = 'red';
+  messageWarning.style.color = 'red';
+  agreeWarning.style.color = 'red';
+
+  nameInput.parentNode.insertBefore(nameWarning, nameInput.nextSibling);
+  emailInput.parentNode.insertBefore(emailWarning, emailInput.nextSibling);
+  messageTextarea.parentNode.insertBefore(messageWarning, messageTextarea.nextSibling);
+  agreeCheckbox.parentNode.insertBefore(agreeWarning, agreeCheckbox.nextSibling);
+
+  function updateWarnings() {
+    nameWarning.textContent = nameInput.value.trim() === '' ? 'Name is required.' : '';
+    emailWarning.textContent = emailInput.value.trim() === '' ? 'Email Address is required.' : '';
+    messageWarning.textContent = messageTextarea.value.trim() === '' ? 'Message is required.' : '';
+    agreeWarning.textContent = !agreeCheckbox.checked ? 'You must accept the Privacy Policy.' : '';
+  }
+
+  sendButton.addEventListener('mouseover', function() {
+    updateWarnings();
+  });
+
+  form.addEventListener('input', updateWarnings);
+  form.addEventListener('change', updateWarnings);
+
+  updateWarnings(); // Initialize warnings
+});
+</script>
+
+            
     <script>
         window.addEventListener('load', function() {
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
