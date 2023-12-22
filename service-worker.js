@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-cache-v9.7';
+const CACHE_NAME = 'static-cache-v9.8';
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
      '/css/syliesgoko.css',
