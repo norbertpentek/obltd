@@ -6,6 +6,7 @@
     <title>Contact Us - Go&Ko Services LTD</title>
 <link rel="stylesheet" href="/css/syliesgoko.css" />
 </head>
+
 <body id="background-con">
     <nav>
         <ul>
@@ -52,6 +53,32 @@
         </div>
     </div>
     </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var form = document.getElementById('myForm');
+          var sendButton = document.getElementById('send');
+          var nameInput = document.getElementById('name');
+          var emailInput = document.getElementById('email');
+          var messageTextarea = document.getElementById('message');
+          var agreeCheckbox = document.getElementById('agree');
+      
+          function updateButtonState() {
+            sendButton.disabled = !(
+              nameInput.value.trim() !== '' &&
+              emailInput.checkValidity() &&
+              messageTextarea.value.trim() !== '' &&
+              agreeCheckbox.checked
+            );
+          }
+      
+          // Ellenőrizd a mezőket minden változáskor
+          form.addEventListener('input', updateButtonState);
+          form.addEventListener('change', updateButtonState);
+      
+          // Kezdeti állapot a gomb letiltása
+          updateButtonState();
+        });
+      </script>
     <script>document.addEventListener('DOMContentLoaded', function () {
         function resetForm() {
             var form = document.getElementById('myForm');
@@ -78,6 +105,7 @@
     });
     </script>
     
+      
     <script>
         window.addEventListener('load', function() {
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
