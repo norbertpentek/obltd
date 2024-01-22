@@ -291,7 +291,9 @@ nav ul li a {
     transition: filter 3s ease-in-out;
 }
 #background-con {
-    background: linear-gradient(to bottom right, #4d4d4d, #e6e6e6);
+    background-image: url('/kepek/leather.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
     min-height: 100vh;
 }
 .contact-form div {
