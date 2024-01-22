@@ -3,7 +3,9 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;  
+    background-image: url('/kepek/.webp');
+  background-repeat: no-repeat;
+  background-size: cover;   
 }
 nav ul li {
     float: left;
@@ -48,7 +50,9 @@ nav, #nav1 {
     left: 0;  
     width: 100%;  
     z-index: 1000;  
-    background-color: #333;  
+    background-image: url('/kepek/sky.webp');
+  background-repeat: no-repeat;
+  background-size: cover;   
     height:auto;
 }
 nav ul li a {
@@ -108,3 +112,5 @@ nav ul li a {
     
     text-align: center;  
 }
+nav ul li a {
+    font-size: 22px;}

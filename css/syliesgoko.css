@@ -54,7 +54,9 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;  
+    background-image: url('/kepek/sky.webp');
+  background-repeat: no-repeat;
+  background-size: cover;  
     align-items: center;  
     height: 100%; 
     list-style-type: none;
@@ -74,11 +76,13 @@ nav, #nav1 {
     left: 0;
     width: 100%; 
     z-index: 1000; 
-    background-color: #333; 
+    background-image: url('/kepek/sky.webp');
+  background-repeat: no-repeat;
+  background-size: cover; 
     height:auto;
 }
 nav ul li a {
-    font-size: 16px;
+    font-size: 22px;
 }
 @media (max-width: 600px) {
     nav ul li a {

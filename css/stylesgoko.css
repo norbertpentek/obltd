@@ -22,3 +22,5 @@ body {
     width: 100%;
     height: auto;
 }
+nav ul li a {
+    font-size: 22px;}
