@@ -362,7 +362,7 @@ nav ul li a {
     
     display: inline-block;
     font-size: large; 
-    color: black; 
+    color: rgb(207, 199, 199); 
     margin-left: 1rem;
 }
 #send {
@@ -468,7 +468,7 @@ position: relative;
     }
 
 p {
-    color: rgb(2, 2, 3);
+    color: rgb(242, 242, 245);
     margin-left: 5px;
 }
 .galleryContactUs {
@@ -498,3 +498,6 @@ p {
     #services h1 {font-size: small;}
     #servicesList li {font-size: 14px;
     }}
+    h3 {
+        color: rgb(177, 174, 174);
+    }
