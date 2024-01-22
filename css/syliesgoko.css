@@ -374,16 +374,18 @@ nav ul li a {
     text-align: center;
 }
 .social-media-section {
-    text-align: center;
-    margin: 0;
+   justify-content: space-around;
+   
+
 }
 .social-media-icons a {
-    margin: 20px 20px;
+    
     display: inline-block; /* Az elemek egymás mellett jelenjenek meg */
+    
 }
 .social-media-icons img {
-    width: 190px;
-    height: auto;
+    width: 150px;
+    
 }
 #mainFooter {
     position: fixed;
@@ -411,7 +413,7 @@ nav ul li a {
   .facebook-icon {
     display: flex;
     padding: 0;     
-    justify-content: space-between;
+    justify-content: space-around;
     height: 40px;
     margin: 50px 30px auto 30px;
     max-width: 100%;   
