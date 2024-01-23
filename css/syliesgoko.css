@@ -358,6 +358,9 @@ nav ul li a {
 .privacy-policy {
     appearance: none;
 }
+.privacy-policy a {
+    color: white;
+}
 .privacy-policy label {
     
     display: inline-block;
