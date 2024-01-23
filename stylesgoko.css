@@ -3,7 +3,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url('/kepek/.webp');
+    /*background-image: url('/kepek/.webp');*/
   background-repeat: no-repeat;
   background-size: cover;   
 }
