@@ -245,7 +245,7 @@ nav ul li a {
   font-weight: bold;
   margin-bottom: 0px;
   filter: blur(10px); /* Kezdetben homályos */
-  transition: filter 1.5s ease-in-out;
+  transition: filter 3s ease-in-out;
 }
 #about-us h1 {
   text-align: center;
@@ -470,7 +470,7 @@ nav ul li a {
 }
 
 p {
-  color: rgb(53, 53, 55);
+  color: rgb(41, 42, 45);
   margin-left: 5px;
 }
 .galleryContactUs {
