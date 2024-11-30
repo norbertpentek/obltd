@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Services - Go&Ko Services LTD</title>
-    <link rel="stylesheet" href="/css/syliesgoko.css">
-</head>
-<body class="hattersz">
-    <div id="background-images" style="background-image: url('/kepek/ht.webp');"></div>
+    <link rel="stylesheet" href="/css/syliesgoko.css" />
+  </head>
+  <body class="hattersz">
+    <div
+      id="background-images"
+      style="background-image: url('/kepek/tree.webp')"
+    ></div>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="Projects Gallery.html">Projects Gallery</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Projects Gallery.html">Projects Gallery</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
     </nav>
     <section id="services">
-        <h1>WE OFFER THE FOLLOWING SERVICES FOR BOTH RESIDENTAL AND COMMERCIAL PROPERTIES:</h1>
-        <ul id="servicesList">
-            <li>-Home renovation</li>
-            <li>-Commercial maintenance</li>
-            <li>-General building</li>
-            <li>-Back & Side extension</li>
-            <li>-Loft conversion</li>
-            <li>-Porch & Conservatory & Garden house</li>
-            <li>-Driveway & Patio</li>
-            <li>-House insulation & Eco friend roof</li>
-            <li>-Kitchen & Bathroom installation</li>
-            <li>-Roofing & Guttering</li>
-            <li>-Carpentry</li>
-            <li>-Tiling & Flooring</li>
-            <li>-Painting & Decorations</li>
-            <li>-Electrical</li>
-            <li>-Plumbing & Drainage</li>
-            <li>-Metal restoring & welding</li>
-            <li>-Air Conditioning</li>
-            <li>-Office glazing</li>
-            <li>-Sound proofing</li>
-            <li>-Handyman</li>
-            <li>-Fencing & Decking</li>
-            <li>-Pest control</li>
-        </ul>
+      <h1>
+        WE OFFER THE FOLLOWING SERVICES FOR BOTH RESIDENTAL AND COMMERCIAL
+        PROPERTIES:
+      </h1>
+      <ul id="servicesList">
+        <li>-Home renovation</li>
+        <li>-Commercial maintenance</li>
+        <li>-General building</li>
+        <li>-Back & Side extension</li>
+        <li>-Loft conversion</li>
+        <li>-Porch & Conservatory & Garden house</li>
+        <li>-Driveway & Patio</li>
+        <li>-House insulation & Eco friend roof</li>
+        <li>-Kitchen & Bathroom installation</li>
+        <li>-Roofing & Guttering</li>
+        <li>-Carpentry</li>
+        <li>-Tiling & Flooring</li>
+        <li>-Painting & Decorations</li>
+        <li>-Electrical</li>
+        <li>-Plumbing & Drainage</li>
+        <li>-Metal restoring & welding</li>
+        <li>-Air Conditioning</li>
+        <li>-Office glazing</li>
+        <li>-Sound proofing</li>
+        <li>-Handyman</li>
+        <li>-Fencing & Decking</li>
+        <li>-Pest control</li>
+      </ul>
     </section>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-        const listItems = document.querySelectorAll('#services li');
-        for (var i = 0; i < listItems.length; i++) {
-            listItems[i].style.animationDelay = (i * 0.3) + 's';
-        }
-        setTimeout(function() {
-            var background = document.getElementById('about-us-background');
-            var backgroundImage = document.getElementById('background-image');
-            var backgroundImage = document.getElementById('background-images');
-         //  var aboutUs = document.getElementById('about-us'); proba!!!
-if (backgroundImage) {
-    backgroundImage.style.filter = 'blur(10px)'; // Homályosítás alkalmazása
-}
-            if (background) {
-                background.classList.add('blurred');
-            }
-            if (backgroundImage) {
-                backgroundImage.classList.add('blurred');
-            }
-            // if (aboutUs) {
-            //     aboutUs.style.filter = 'blur(0)';
-            // }
-        }, 200); // 0.4 másodperc után alkalmazza az elmosódást és élesítést
-    });</script>
     <script>
-        window.addEventListener('load', function() {
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','G-NK2SWTH5XX');
-        });
-        </script>
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+        const listItems = document.querySelectorAll("#services li");
+        for (var i = 0; i < listItems.length; i++) {
+          listItems[i].style.animationDelay = i * 0.3 + "s";
+        }
+        setTimeout(function () {
+          var background = document.getElementById("about-us-background");
+          var backgroundImage = document.getElementById("background-image");
+          var backgroundImage = document.getElementById("background-images");
+          //  var aboutUs = document.getElementById('about-us'); proba!!!
+          if (backgroundImage) {
+            backgroundImage.style.filter = "blur(10px)"; // Homályosítás alkalmazása
+          }
+          if (background) {
+            background.classList.add("blurred");
+          }
+          if (backgroundImage) {
+            backgroundImage.classList.add("blurred");
+          }
+          // if (aboutUs) {
+          //     aboutUs.style.filter = 'blur(0)';
+          // }
+        }, 200); // 0.4 másodperc után alkalmazza az elmosódást és élesítést
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "G-NK2SWTH5XX");
+      });
+    </script>
+  </body>
 </html>

@@ -1,19 +1,19 @@
-const CACHE_NAME = "static-cache-v9.33";
+const CACHE_NAME = "static-cache-v9.48";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
-  "/css/syliesgoko.css",
-  "/kepek/ht.webp",
-  "/kepek/pg1.webp",
-  "/kepek/contactus1.webp",
+  //"/css/syliesgoko.css",
+  //"/kepek/tree.webp",
+  //"/kepek/pg1.webp",
+  //"/kepek/contactus1.webp",
   // '/kepek/kepgoco.webp',
-  "/kepek/logo3.webp",
+  //"/kepek/logo3.webp",
   // // '/kepek/mybuilder.webp',
   // '/kepek/fb.webp',
   // // '/kepek/bark.webp',
   // // '/kepek/checkatrade.webp',
   // //'/kepek/David.webp',
   // //'/kepek/Otto.webp',
-  "/kepek/htvilagos.webp",
+  //"/kepek/htvilagos.webp",
   // // '/kepek/Projects Gallery/Back & Side Extension3/1.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension3/2.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension3/3.webp',
