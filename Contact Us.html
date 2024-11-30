@@ -1,160 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us - Go&Ko Services LTD</title>
-<link rel="stylesheet" href="/css/syliesgoko.css" />
-</head>
+    <link rel="stylesheet" href="/css/syliesgoko.css" />
+  </head>
 
-<body id="background-con">
+  <body id="background-con">
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="Projects Gallery.html">Projects Gallery</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-    </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Projects Gallery.html">Projects Gallery</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
     </nav>
-    <form id="myForm" action="https://formspree.io/f/mnqkykbr" method="POST" class="contact-form">
-        <div>
-            <label for="name"></label>
-            <input type="text" id="name" name="name" placeholder="Your Name *" required>
-        </div>
-        <div>
-            <label for="company"></label>
-            <input type="text" id="company" name="company" placeholder="Your Company Name...">
-        </div>
-        <div>
-            <label for="phone"></label>
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number...">
-        </div>
-        <div>
-            <label for="email"></label>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email Address *" required>
-        </div>
-    
-        <div>
-            <label for="message"></label>
-            <textarea id="message" name="message" placeholder="Your Message *" required></textarea>
-        </div>
-<div class="privacy-policy">
-        <input type="checkbox" id="agree" name="agree" required;>
-        <label for="agree">I accept the <a href="index3.html">Privacy Policy</a>.</label>
+    <form
+      id="myForm"
+      action="https://formspree.io/f/mnqkykbr"
+      method="POST"
+      class="contact-form"
+    >
+      <div>
+        <label for="name"></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name *"
+          required
+        />
+      </div>
+      <div>
+        <label for="company"></label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="Your Company Name..."
+        />
+      </div>
+      <div>
+        <label for="phone"></label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Your Phone Number..."
+        />
+      </div>
+      <div>
+        <label for="email"></label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          placeholder="Your Email Address *"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="message"></label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message *"
+          required
+        ></textarea>
+      </div>
+      <div class="privacy-policy">
+        <input type="checkbox" id="agree" name="agree" required; />
+        <label for="agree"
+          >I accept the <a href="index3.html">Privacy Policy</a>.</label
+        >
         <button id="send" type="submit">Send</button>
-    </div>
-<div class="social-media-section">
+      </div>
+      <!-- <div class="social-media-section">
         <h3>YOU CAN ALSO FIND US ON:</h3>
         <div class="social-media-icons">
             <a href="https://www.checkatrade.com/trades/goandkoservices"><img src="/kepek/checkatrade.webp" alt="logo3"></a>
             <a href="https://www.bark.com/en/gb/company/goko-services-ltd/wNRJ0/?show_reviews=true"><img src="/kepek/bark.webp" alt="logo2"></a>    
             <a href="https://www.mybuilder.com/profile/view/goko_services_ltd"><img src="/kepek/mybuilder.webp" alt="logo1"></a>
         </div>
-    </div>
+    </div> -->
     </form>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          var form = document.getElementById('myForm');
-          var sendButton = document.getElementById('send');
-          var nameInput = document.getElementById('name');
-          var emailInput = document.getElementById('email');
-          var messageTextarea = document.getElementById('message');
-          var agreeCheckbox = document.getElementById('agree');
-      
-          function updateButtonState() {
-            sendButton.disabled = !(
-              nameInput.value.trim() !== '' &&
-              emailInput.checkValidity() &&
-              messageTextarea.value.trim() !== '' &&
-              agreeCheckbox.checked
-            );
-          }
-      
-          // Ellenőrizd a mezőket minden változáskor
-          form.addEventListener('input', updateButtonState);
-          form.addEventListener('change', updateButtonState);
-      
-          // Kezdeti állapot a gomb letiltása
-          updateButtonState();
-        });
-      </script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("myForm");
+        var sendButton = document.getElementById("send");
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var messageTextarea = document.getElementById("message");
+        var agreeCheckbox = document.getElementById("agree");
+
+        function updateButtonState() {
+          sendButton.disabled = !(
+            nameInput.value.trim() !== "" &&
+            emailInput.checkValidity() &&
+            messageTextarea.value.trim() !== "" &&
+            agreeCheckbox.checked
+          );
+        }
+
+        // Ellenőrizd a mezőket minden változáskor
+        form.addEventListener("input", updateButtonState);
+        form.addEventListener("change", updateButtonState);
+
+        // Kezdeti állapot a gomb letiltása
+        updateButtonState();
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         function resetForm() {
-            var form = document.getElementById('myForm');
-            if (form) {
-                form.reset();
-            }
+          var form = document.getElementById("myForm");
+          if (form) {
+            form.reset();
+          }
         }
         setTimeout(resetForm, 250);
-        document.getElementById('send').addEventListener('click', function() {
-            setTimeout(resetForm, 750);
+        document.getElementById("send").addEventListener("click", function () {
+          setTimeout(resetForm, 750);
         });
-    
-        window.addEventListener('focus', function() {
-            setTimeout(resetForm, 500);
+
+        window.addEventListener("focus", function () {
+          setTimeout(resetForm, 500);
         });
-    });
+      });
     </script>
-    <script>document.getElementById("myForm").addEventListener("submit", function(event){
-        var checkBox = document.getElementById("agree");
-        if (!checkBox.checked) {
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          var checkBox = document.getElementById("agree");
+          if (!checkBox.checked) {
             alert("Please accept the terms and conditions.");
             event.preventDefault();
-        }
-    });
-    </script>
-          <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('myForm');
-  var sendButton = document.getElementById('send');
-  var nameInput = document.getElementById('name');
-  var emailInput = document.getElementById('email');
-  var messageTextarea = document.getElementById('message');
-  var agreeCheckbox = document.getElementById('agree');
-
-  var nameWarning = document.createElement('span');
-  var emailWarning = document.createElement('span');
-  var messageWarning = document.createElement('span');
-  var agreeWarning = document.createElement('span');
-
-  nameWarning.style.color = 'red';
-  emailWarning.style.color = 'red';
-  messageWarning.style.color = 'red';
-  agreeWarning.style.color = 'red';
-
-  nameInput.parentNode.insertBefore(nameWarning, nameInput.nextSibling);
-  emailInput.parentNode.insertBefore(emailWarning, emailInput.nextSibling);
-  messageTextarea.parentNode.insertBefore(messageWarning, messageTextarea.nextSibling);
-  agreeCheckbox.parentNode.insertBefore(agreeWarning, agreeCheckbox.nextSibling);
-
-  function updateWarnings() {
-    nameWarning.textContent = nameInput.value.trim() === '' ? 'Name is required.' : '';
-    emailWarning.textContent = emailInput.value.trim() === '' ? 'Email Address is required.' : '';
-    messageWarning.textContent = messageTextarea.value.trim() === '' ? 'Message is required.' : '';
-    agreeWarning.textContent = !agreeCheckbox.checked ? 'You must accept the Privacy Policy.' : '';
-  }
-
-  sendButton.addEventListener('mouseover', function() {
-    updateWarnings();
-  });
-
-  form.addEventListener('input', updateWarnings);
-  form.addEventListener('change', updateWarnings);
-
-  updateWarnings(); // Initialize warnings
-});
-</script>
-
-            
-    <script>
-        window.addEventListener('load', function() {
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','G-NK2SWTH5XX');
+          }
         });
-        </script>
-</body>
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("myForm");
+        var sendButton = document.getElementById("send");
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var messageTextarea = document.getElementById("message");
+        var agreeCheckbox = document.getElementById("agree");
+
+        var nameWarning = document.createElement("span");
+        var emailWarning = document.createElement("span");
+        var messageWarning = document.createElement("span");
+        var agreeWarning = document.createElement("span");
+
+        nameWarning.style.color = "red";
+        emailWarning.style.color = "red";
+        messageWarning.style.color = "red";
+        agreeWarning.style.color = "red";
+
+        nameInput.parentNode.insertBefore(nameWarning, nameInput.nextSibling);
+        emailInput.parentNode.insertBefore(
+          emailWarning,
+          emailInput.nextSibling
+        );
+        messageTextarea.parentNode.insertBefore(
+          messageWarning,
+          messageTextarea.nextSibling
+        );
+        agreeCheckbox.parentNode.insertBefore(
+          agreeWarning,
+          agreeCheckbox.nextSibling
+        );
+
+        function updateWarnings() {
+          nameWarning.textContent =
+            nameInput.value.trim() === "" ? "Name is required." : "";
+          emailWarning.textContent =
+            emailInput.value.trim() === "" ? "Email Address is required." : "";
+          messageWarning.textContent =
+            messageTextarea.value.trim() === "" ? "Message is required." : "";
+          agreeWarning.textContent = !agreeCheckbox.checked
+            ? "You must accept the Privacy Policy."
+            : "";
+        }
+
+        sendButton.addEventListener("mouseover", function () {
+          updateWarnings();
+        });
+
+        form.addEventListener("input", updateWarnings);
+        form.addEventListener("change", updateWarnings);
+
+        updateWarnings(); // Initialize warnings
+      });
+    </script>
+
+    <script>
+      window.addEventListener("load", function () {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "G-NK2SWTH5XX");
+      });
+    </script>
+  </body>
 </html>
