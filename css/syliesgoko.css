@@ -241,11 +241,17 @@ nav ul li a {
   z-index: 15;
   min-height: 0;
   color: black;
-  padding: 0 5px 5px 5px;
+  padding: 20px; /* Hely a szöveg körül */
   font-weight: bold;
   margin-bottom: 0px;
   filter: blur(10px); /* Kezdetben homályos */
-  transition: filter 3s ease-in-out;
+  transition: filter 3s ease-in-out, background-color 3s ease-in-out,
+    box-shadow 3s ease-in-out;
+  background-color: transparent; /* Kezdetben nincs háttér */
+  box-shadow: none; /* Kezdetben nincs keret */
+  max-width: 800px; /* A szövegblokk maximális szélessége */
+  margin: 20px auto; /* Középre igazítás */
+  text-align: center; /* Szöveg középre helyezése */
 }
 #about-us h1 {
   text-align: center;
@@ -290,7 +296,7 @@ nav ul li a {
   transition: filter 3s ease-in-out;
 }
 #background-con {
-  background-image: url("/kepek/leather.webp");
+  background-image: url("/kepek/scratch.webp");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
