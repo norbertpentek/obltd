@@ -138,7 +138,7 @@ nav ul li a {
   justify-content: center;
   align-items: center; /* Képek függőleges középre igazítása */
 
-  padding-top: 5px;
+  padding-top: 0;
   min-width: 20px;
   max-width: 1600px;
   margin: 0 35px 0 35px;
@@ -241,7 +241,7 @@ nav ul li a {
   z-index: 15;
   min-height: 0;
   color: black;
-  padding: 20px; /* Hely a szöveg körül */
+  padding: 20px 20px 0 20px; /* Hely a szöveg körül */
   font-weight: bold;
   margin-bottom: 0px;
   filter: blur(10px); /* Kezdetben homályos */
