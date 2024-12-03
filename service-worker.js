@@ -1,18 +1,18 @@
-const CACHE_NAME = "static-cache-v9.98";
+const CACHE_NAME = "static-cache-v9.99";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
-  //"/css/syliesgoko.css",
-  //"/kepek/tree.webp",
-  //"/kepek/pg1.webp",
+  "/css/syliesgoko.css",
+  "/kepek/cu3.webp",
+  "/kepek/pg3.webp",
   //"/kepek/contactus1.webp",
-  // '/kepek/kepgoco.webp',
+  "/kepek/.whiteobltd2.webp",
   //"/kepek/logo3.webp",
   // // '/kepek/mybuilder.webp',
   // '/kepek/fb.webp',
   // // '/kepek/bark.webp',
   // // '/kepek/checkatrade.webp',
   // //'/kepek/David.webp',
-  // //'/kepek/Otto.webp',
+  "/kepek/Otto.webp",
   //"/kepek/htvilagos.webp",
   // // '/kepek/Projects Gallery/Back & Side Extension3/1.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension3/2.webp',
@@ -42,7 +42,7 @@ const STATIC_ASSETS = [
   // // '/kepek/Projects Gallery/Back & Side Extension/18.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension/19.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension/20.webp',
-  // '/script.js',
+  "/script.js",
 ];
 
 // Install event - caching static assets
