@@ -55,7 +55,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url("/kepek/sky.webp");
+  background-image: url("/kepek/sky1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
@@ -78,7 +78,7 @@ nav,
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-image: url("/kepek/sky.webp");
+  background-image: url("/kepek/sky1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
