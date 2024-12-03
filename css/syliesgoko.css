@@ -514,3 +514,9 @@ p {
 h3 {
   color: rgb(177, 174, 174);
 }
+@media (max-width: 600px) and (orientation: portrait) {
+  .galleryContactUs img {
+    height: 30vw; /* Növeld a magasságot */
+    max-height: 350px; /* Növeld a maximális magasságot */
+  }
+}
