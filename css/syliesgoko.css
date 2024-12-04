@@ -293,12 +293,12 @@ nav ul li a {
   filter: blur(0); /* Kezdetben nincs homályosítás */
   transition: filter 3s ease-in-out;
 }
-#background-con {
+/* #background-con {
   background-image: url("/kepek/wood.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-}
+  min-height: 100vh; 
+}*/
 .contact-form div {
   margin-bottom: 1rem;
 }
