@@ -294,7 +294,7 @@ nav ul li a {
   transition: filter 3s ease-in-out;
 }
 #background-con {
-  background-image: url("/kepek/sky.webp");
+  background-image: url("/kepek/wood.webp");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
