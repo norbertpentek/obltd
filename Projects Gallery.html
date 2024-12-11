@@ -9,7 +9,13 @@
     <title>Project Gallery - Otto Building LTD</title>
     <link rel="stylesheet" href="/stylesgoko.css" />
   </head>
-
+  <script>
+    window.addEventListener('load', () => {
+        localStorage.clear(); // Local storage ürítése
+        sessionStorage.clear(); // Session storage ürítése
+        console.log('Cache cleared on load');
+    });
+</script>
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-NK2SWTH5XX"
