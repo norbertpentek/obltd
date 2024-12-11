@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v8.1";
+const CACHE_NAME = "static-cache-v8.2";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   "/kepek/cu3.webp",
