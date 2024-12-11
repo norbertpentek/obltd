@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v8.3";
+const CACHE_NAME = "static-cache-v8.4";
 const STATIC_ASSETS = [
   "/css/stylesgoko.css"
   "/css/syliesgoko.css"
