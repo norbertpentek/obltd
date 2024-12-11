@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v7.4";
+const CACHE_NAME = "static-cache-v7.5";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   "/kepek/cu3.webp",
@@ -47,15 +47,13 @@ const STATIC_ASSETS = [
 ];
 
 // Install event - caching static assets
-self.addEventListener("install", function (event) {
-  // Itt vannak az erőforrások cache-elési logikái
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => cache.addAll(STATIC_ASSETS))
+      .then(() => self.skipWaiting())
   );
-  // Skip waiting parancs
-  self.skipWaiting();
 });
 
 // Activate event - cleaning up old caches
@@ -72,49 +70,35 @@ self.addEventListener("activate", (event) => {
           })
         );
       })
-      .then(() => {
-        // Miután a régi cache-ek törlődtek, átvesszük az irányítást az összes kliens felett
-        return self.clients.claim();
-      })
+      .then(() => self.clients.claim())
   );
 });
 
 self.addEventListener("fetch", function (event) {
-  // Csak GET kérések gyorsítótárazása
   if (event.request.method !== "GET") return;
 
   event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => {
-        // Ha van gyorsítótárazott válasz, adjuk vissza azt
-        if (response) {
-          return response;
+    fetch(event.request)
+      .then((networkResponse) => {
+        // Ha sikeres hálózati válasz, tegyük cache-be
+        if (
+          !networkResponse ||
+          networkResponse.status !== 200 ||
+          networkResponse.type !== "basic"
+        ) {
+          return networkResponse;
         }
 
-        return fetch(event.request).then(function (networkResponse) {
-          // Ellenőrizd, hogy a válasz nem részleges-e (206-os válaszok kizárása)
-          if (
-            !networkResponse ||
-            networkResponse.status === 206 ||
-            networkResponse.type !== "basic"
-          ) {
-            return networkResponse;
-          }
-
-          // Másold és tárold a választ a gyorsítótárban
-          var responseToCache = networkResponse.clone();
-
-          caches.open(CACHE_NAME).then(function (cache) {
-            cache.put(event.request, responseToCache);
-          });
-
-          return networkResponse;
+        const responseToCache = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
         });
+
+        return networkResponse;
       })
-      .catch((error) => {
-        console.error("Fetching failed:", error);
-        throw error;
+      .catch(() => {
+        // Ha nem érhető el hálózat, a cache-ből szolgáljuk ki
+        return caches.match(event.request);
       })
   );
 });
