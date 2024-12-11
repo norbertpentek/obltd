@@ -1,11 +1,16 @@
-<IfModule mod_expires.c> ExpiresActive Off </IfModule>
-
-<IfModule mod_headers.c>
-  # Általános cache-tiltás Header set Cache-Control "no-cache, no-store,
-  must-revalidate" Header set Pragma "no-cache" Header set Expires 0 # ETag
-  letiltása (csökkenti a cache-hit esélyét) Header unset ETag FileETag None
+# Kapcsoljuk be a mod_rewrite modult, ha még nincs engedélyezve
+<IfModule mod_rewrite.c>
+  RewriteEngine On # Véletlenszerű query string hozzáfűzése a fájlokhoz (cache
+  buster) RewriteCond %{REQUEST_FILENAME} -f RewriteRule ^(.*)$ $1?v=%{TIME}
+  [QSA,L]
 </IfModule>
 
-# Véletlenszerű query string hozzáfűzése a fájlokhoz (cache buster)
-RewriteEngine On RewriteCond %{REQUEST_FILENAME} -f RewriteRule ^(.*)$
-$1?v=%{TIME} [QSA,L]
+# Cache kikapcsolása Expires fejléc segítségével
+<IfModule mod_expires.c> ExpiresActive On ExpiresDefault "now" </IfModule>
+
+# Cache-Control fejléc beállítása (gyorsítótár letiltása)
+<IfModule mod_headers.c>
+  Header always set Cache-Control "no-cache, no-store, must-revalidate" Header
+  always set Pragma "no-cache" Header always set Expires "0" # ETag letiltása
+  (csökkenti a cache-hit esélyét) Header unset ETag FileETag None
+</IfModule>

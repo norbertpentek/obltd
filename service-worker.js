@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v8";
+const CACHE_NAME = "static-cache-v8.1";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   "/kepek/cu3.webp",
@@ -43,7 +43,7 @@ const STATIC_ASSETS = [
   // // '/kepek/Projects Gallery/Back & Side Extension/18.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension/19.webp',
   // // '/kepek/Projects Gallery/Back & Side Extension/20.webp',
-  // "/script.js",
+  "/script.js",
 ];
 
 // Install event - caching static assets
