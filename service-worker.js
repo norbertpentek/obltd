@@ -1,9 +1,11 @@
-const CACHE_NAME = "static-cache-v7.1";
+const CACHE_NAME = "static-cache-v7.2";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   "/css/syliesgoko.css",
   "/kepek/cu3.webp",
   "/kepek/pg3.webp",
+  "/kepek/tree.webp",
+  "/kepek/ko.webp",
   //"/kepek/contactus1.webp",
   "/kepek/.whiteobltd2.webp",
   //"/kepek/logo3.webp",
