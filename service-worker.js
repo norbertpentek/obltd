@@ -1,53 +1,5 @@
-const CACHE_NAME = "static-cache-v8.4";
-const STATIC_ASSETS = [
-  "/css/stylesgoko.css"
-  "/css/syliesgoko.css"
-  "/stylesgoko.css"
-  // Add paths to all of your static files here
-  "/kepek/cu3.webp",
-  "/kepek/pg3.webp",
-  "/kepek/tree.webp",
-  "/kepek/ko.webp",
-  //"/kepek/contactus1.webp",
-  "/kepek/.whiteobltd2.webp",
-  //"/kepek/logo3.webp",
-  // // '/kepek/mybuilder.webp',
-  // '/kepek/fb.webp',
-  // // '/kepek/bark.webp',
-  // // '/kepek/checkatrade.webp',
-  // //'/kepek/David.webp',
-  "/kepek/Otto.webp",
-  //"/kepek/htvilagos.webp",
-  // // '/kepek/Projects Gallery/Back & Side Extension3/1.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/2.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/3.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/4.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/5.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/6.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/7.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension3/8.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/1.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/2.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/3.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/4.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/5.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/6.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/7.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/8.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/9.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/10.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/11.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/12.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/13.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/14.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/15.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/16.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/17.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/18.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/19.webp',
-  // // '/kepek/Projects Gallery/Back & Side Extension/20.webp',
-  "/script.js",
-];
+const CACHE_NAME = "static-cache-v8.7";
+const STATIC_ASSETS = ["/kepek/bark.png"];
 
 // Install event - caching static assets
 self.addEventListener("install", (event) => {
