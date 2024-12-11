@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v7.3";
+const CACHE_NAME = "static-cache-v7.4";
 const STATIC_ASSETS = [
   // Add paths to all of your static files here
   "/kepek/cu3.webp",
@@ -61,15 +61,21 @@ self.addEventListener("install", function (event) {
 // Activate event - cleaning up old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      );
-    })
+    caches
+      .keys()
+      .then((keys) => {
+        return Promise.all(
+          keys.map((key) => {
+            if (key !== CACHE_NAME) {
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+      .then(() => {
+        // Miután a régi cache-ek törlődtek, átvesszük az irányítást az összes kliens felett
+        return self.clients.claim();
+      })
   );
 });
 
