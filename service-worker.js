@@ -1,5 +1,5 @@
-const CACHE_NAME = "static-cache-v8.9";
-const STATIC_ASSETS = ["/kepek/bark.png"];
+const CACHE_NAME = "static-cache-v8.10";
+const STATIC_ASSETS = ["/kepek/tree.webp", "/kepek/ko.webp", "/kepek/sky.webp"];
 
 // Install event - caching static assets
 self.addEventListener("install", (event) => {
