@@ -14,8 +14,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Otto Building LTD</title>
-    <link rel="preload" href="/css/syliesgoko.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/css/syliesgoko.css" /></noscript>
+    <link rel="stylesheet" href="/css/syliesgoko.css" />
   </head>
   <body>
     <nav id="nav1">
@@ -60,13 +59,10 @@
       </div>
       <div class="logo">
         <img
-          src="/kepek/whiteobltd2-239.webp"
-          srcset="/kepek/whiteobltd2-239.webp 239w, /kepek/whiteobltd2-478.webp 478w"
-          sizes="(max-width: 480px) 50vw, 239px"
+          src="/kepek/whiteobltd2.webp"
           width="239"
           height="100"
           alt="ottologo"
-          fetchpriority="high"
         />
       </div>
       <div class="h2">
@@ -80,40 +76,21 @@
     </header>
     <main>
       <div class="video-background">
-        <video
-          id="videoBackground"
-          autoplay
-          muted
-          playsinline
-          loop
-          preload="auto"
-          poster="/kepek/bv-poster.webp"
-          data-src-mobile="/video/bv-mobile.mp4"
-          data-src-desktop="/video/bv-desktop.mp4"
-          src="/video/bv.mp4"
-        ></video>
-        <script>
-          (function () {
-            var v = document.getElementById("videoBackground");
-            if (!v) return;
-            try {
-              var useMobile = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
-              var target = useMobile ? v.dataset.srcMobile : v.dataset.srcDesktop;
-              if (target && v.getAttribute("src") !== target) {
-                v.setAttribute("src", target);
-                v.load();
-                var p = v.play && v.play();
-                if (p && typeof p.catch === "function") p.catch(function () {});
-              }
-            } catch (e) {}
-          })();
-        </script>
+        <video autoplay muted playsinline loop id="videoBackground">
+          <source src="/video/bv.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="galleryContactUs">
         <a href="Contact Us.html" target=""
-          ><img src="/kepek/cu3.webp" height="50" width="50" alt="picture contact us" /></a>
+          ><img
+            src="/kepek/cu3.webp"
+            height="50"
+            width="50"
+            alt="picture contact us"
+        /></a>
         <a href="Projects Gallery.html" target=""
-          ><img src="/kepek/pg3.webp" height="50" width="50" alt="picture pg" /></a>
+          ><img src="/kepek/pg3.webp" height="50" width="50" alt="picture pg"
+        /></a>
       </div>
     </main>
     <footer id="mainFooter">
