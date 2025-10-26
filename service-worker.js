@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v8.10";
+const CACHE_NAME = "static-cache-v8.11";
 const STATIC_ASSETS = ["/kepek/tree.webp", "/kepek/ko.webp", "/kepek/sky.webp"];
 
 // Install event - caching static assets
@@ -31,6 +31,14 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
+
+  const requestUrl = event.request.url;
+  if (requestUrl.includes("/Projects%20Gallery/")) {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+    return;
+  }
 
   event.respondWith(
     fetch(event.request)
