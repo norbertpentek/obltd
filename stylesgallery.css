@@ -112,34 +112,9 @@ nav ul li a {
     background-color: #000;
 }
 
-/* Play overlay a videó csempéken */
-#gallery a.video-tile { position: relative; display: block; }
-#gallery a.video-tile::after {
-    content: "";
-    position: absolute;
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
-    width: 64px; height: 64px; border-radius: 50%;
-    background: rgba(0,0,0,0.45);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    pointer-events: none;
-    transition: opacity .2s ease, transform .2s ease;
-}
-#gallery a.video-tile::before {
-    content: "";
-    position: absolute;
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
-    width: 0; height: 0;
-    border-left: 18px solid white; /* háromszög */
-    border-top: 11px solid transparent; border-bottom: 11px solid transparent;
-    pointer-events: none;
-    transition: opacity .2s ease, transform .2s ease;
-}
-#gallery a.video-tile:hover::after, #gallery a.video-tile:hover::before {
-    opacity: 0.95; transform: translate(-50%, -50%) scale(1.05);
-}
-#gallery a.video-tile.playing::after, #gallery a.video-tile.playing::before {
-    opacity: 0; transform: translate(-50%, -50%) scale(0.9);
-}
+/* Play overlay eltávolítva mobil kompatibilitás miatt */
+#gallery a.video-tile { position: static; display: block; }
+#gallery a.video-tile::after, #gallery a.video-tile::before { content: none !important; display: none !important; }
 /* Médialekérdezés mobil nézethez */
 @media (max-width: 600px) {
     #gallery {
