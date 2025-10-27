@@ -238,21 +238,40 @@ window.onload = function () {
     wrap.appendChild(ul);
     nav.insertAdjacentElement("afterend", wrap);
   }
+  // Lightbox állapot figyelése (Fancybox nyitva?)
+  let inLightbox = false;
+  function setupLightboxGuards() {
+    try {
+      if (window.jQuery && jQuery(document) && jQuery(document).on) {
+        jQuery(document)
+          .on("onInit.fb beforeShow.fb", function () {
+            inLightbox = true;
+          })
+          .on("afterClose.fb", function () {
+            inLightbox = false;
+          });
+      }
+    } catch (e) {}
+  }
+  function lightboxActive() {
+    return inLightbox || !!document.querySelector(".fancybox-container");
+  }
   function attachSwipeNav() {
     const cur = categories.findIndex((c) => currentPath() === c.file);
     if (cur < 0) return;
     let startX = 0, startY = 0, dx = 0, dy = 0, touching = false;
     const onStart = (e) => {
+      if (lightboxActive()) { touching = false; return; }
       const t = e.touches ? e.touches[0] : e;
       startX = t.clientX; startY = t.clientY; dx = 0; dy = 0; touching = true;
     };
     const onMove = (e) => {
-      if (!touching) return;
+      if (!touching || lightboxActive()) return;
       const t = e.touches ? e.touches[0] : e;
       dx = t.clientX - startX; dy = t.clientY - startY;
     };
     const onEnd = () => {
-      if (!touching) return; touching = false;
+      if (!touching || lightboxActive()) return; touching = false;
       if (Math.abs(dx) > 60 && Math.abs(dy) < 40) {
         const next = dx < 0 ? cur + 1 : cur - 1;
         if (next >= 0 && next < categories.length) {
@@ -267,6 +286,7 @@ window.onload = function () {
   function init() {
     if (!isCategoryPage()) return;
     injectSubnav();
+    setupLightboxGuards();
     attachSwipeNav();
   }
   if (document.readyState === "loading") {
