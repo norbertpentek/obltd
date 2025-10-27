@@ -51,6 +51,26 @@ nav, #nav1 {
     background-color: #333;  
     height:auto;
 }
+/* Menü alul elhelyezve */
+html.nav-bottom nav,
+html.nav-bottom #nav1,
+body.nav-bottom nav,
+body.nav-bottom #nav1 { top: auto; bottom: 0; }
+/* Tartalom védő belső margó a fix menühöz */
+html { --nav-safe-top: 0px; --nav-safe-bottom: 0px; }
+body.nav-top { padding-top: var(--nav-safe-top); }
+body.nav-bottom { padding-bottom: calc(var(--nav-safe-bottom) + env(safe-area-inset-bottom, 0px)); }
+
+/* Menü váltó gomb */
+.nav-toggle { background: none; border: none; color: rgba(255,255,255,.9); font-size: 16px; padding: 6px 10px; cursor: pointer; }
+.nav-toggle:hover { color: #fff; text-decoration: underline; }
+
+/* Másodlagos kategória menüsor */
+.subnav-cats { position: sticky; top: calc(var(--nav-safe-top, 50px) + 8px); z-index: 900; background: rgba(0,0,0,0.35); backdrop-filter: blur(2px); }
+.subnav-cats ul { list-style: none; margin: 0; padding: 6px 8px; display: flex; gap: 10px; justify-content: center; }
+.subnav-cats li a { color: #e6e6e6; text-decoration: none; padding: 6px 10px; border-radius: 8px; border: 1px solid transparent; }
+.subnav-cats li a:hover { background: rgba(255,255,255,0.18); color: #fff; border-color: rgba(255,255,255,0.4); }
+.subnav-cats li.active a { background: rgba(255,255,255,0.22); color: #fff; border-color: rgba(255,255,255,0.95); }
 nav ul li a {
     font-size: 16px;  
 }
@@ -82,6 +102,44 @@ nav ul li a {
     object-position: center;
     border-radius: 15px;
 }
+/* Videó csempék a Videos oldalhoz */
+#gallery video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    background-color: #000;
+}
+
+/* Play overlay a videó csempéken */
+#gallery a.video-tile { position: relative; display: block; }
+#gallery a.video-tile::after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(0,0,0,0.45);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+#gallery a.video-tile::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 0; height: 0;
+    border-left: 18px solid white; /* háromszög */
+    border-top: 11px solid transparent; border-bottom: 11px solid transparent;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+#gallery a.video-tile:hover::after, #gallery a.video-tile:hover::before {
+    opacity: 0.95; transform: translate(-50%, -50%) scale(1.05);
+}
+#gallery a.video-tile.playing::after, #gallery a.video-tile.playing::before {
+    opacity: 0; transform: translate(-50%, -50%) scale(0.9);
+}
 /* Médialekérdezés mobil nézethez */
 @media (max-width: 600px) {
     #gallery {
@@ -99,3 +157,5 @@ a{
     padding: 0;
     margin: 0;
 }
+/* Biztosítjuk, hogy ha bármilyen okból megjelenne egy .stealth-toggle gomb, az láthatatlan legyen a galéria aloldalakon */
+.stealth-toggle { opacity: 0; color: rgba(255,255,255,0); background: transparent; border: none; padding: 14px 16px; pointer-events: auto; }

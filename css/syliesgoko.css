@@ -83,6 +83,29 @@ nav,
   background-size: cover;
   height: auto;
 }
+/* Menü alul elhelyezve */
+html.nav-bottom nav,
+html.nav-bottom #nav1,
+body.nav-bottom nav,
+body.nav-bottom #nav1 {
+  top: auto;
+  bottom: 0;
+}
+/* Tartalom védő belső margó a fix menühöz */
+html { --nav-safe-top: 0px; --nav-safe-bottom: 0px; }
+body.nav-top { padding-top: var(--nav-safe-top); }
+body.nav-bottom { padding-bottom: calc(var(--nav-safe-bottom) + env(safe-area-inset-bottom, 0px)); }
+
+/* Váltó gomb a menüben */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.nav-toggle:hover { color: #fff; text-decoration: underline; }
 nav ul li a {
   font-size: 22px;
 }

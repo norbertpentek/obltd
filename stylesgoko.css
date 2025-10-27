@@ -55,6 +55,38 @@ nav, #nav1 {
   background-size: cover;   
     height:auto;
 }
+/* Menü alul elhelyezve */
+html.nav-bottom nav,
+html.nav-bottom #nav1,
+body.nav-bottom nav,
+body.nav-bottom #nav1 { top: auto; bottom: 0; }
+/* Tartalom védő belső margó a fix menühöz */
+html { --nav-safe-top: 0px; --nav-safe-bottom: 0px; }
+body.nav-top { padding-top: var(--nav-safe-top); }
+body.nav-bottom { padding-bottom: calc(var(--nav-safe-bottom) + env(safe-area-inset-bottom, 0px)); }
+
+/* Menü váltó gomb */
+.nav-toggle { background: none; border: none; color: rgba(255,255,255,.9); font-size: 18px; padding: 6px 10px; cursor: pointer; }
+.nav-toggle:hover { color: #fff; text-decoration: underline; }
+
+/* Láthatatlan 6. csempe és a Videos csempe animációja */
+#gallery { position: relative; }
+.gc.hidden, #videosRevealHit { display: none; pointer-events: none; }
+#videosTile { display: none; opacity: 0; pointer-events: none; transition: opacity 3s ease; }
+#videosTile.show { display: block; opacity: 1; pointer-events: auto; }
+/* Látható kapcsoló gomb a Projects Gallery nav sávban (Contact Us mellett) */
+.stealth-toggle {
+  display: block;
+  color: rgba(255,255,255,0);
+  background: transparent;
+  border: none;
+  text-align: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  font: inherit;
+  opacity: 0;
+}
+.stealth-toggle:hover { color: rgba(255,255,255,0); text-decoration: none; }
 nav ul li a {
     font-size: 22px;  
 }
