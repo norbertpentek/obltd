@@ -260,24 +260,89 @@ window.onload = function () {
     const cur = categories.findIndex((c) => currentPath() === c.file);
     if (cur < 0) return;
     let startX = 0, startY = 0, dx = 0, dy = 0, touching = false;
+    let width = 0;
+    // Slider overlay elemek
+    let slider = null, track = null, slidePrev = null, slideCur = null, slideNext = null;
+    function buildSlider() {
+      const gallery = document.getElementById('gallery');
+      if (!gallery) return false;
+      // ha már létezik, töröljük
+      const old = document.querySelector('.cat-slider'); if (old) old.remove();
+      slider = document.createElement('div'); slider.className = 'cat-slider';
+      track = document.createElement('div'); track.className = 'cat-slider-track';
+      slidePrev = document.createElement('div'); slidePrev.className = 'cat-slide';
+      slideCur = document.createElement('div'); slideCur.className = 'cat-slide';
+      slideNext = document.createElement('div'); slideNext.className = 'cat-slide';
+      [slidePrev, slideCur, slideNext].forEach(s=>{ const inner=document.createElement('div'); inner.className='cat-slide-inner'; s.appendChild(inner); });
+      track.appendChild(slidePrev); track.appendChild(slideCur); track.appendChild(slideNext);
+      slider.appendChild(track);
+      gallery.appendChild(slider);
+      // aktuális galéria klónozása vizuális rétegbe
+      const innerCur = slideCur.firstElementChild;
+      innerCur.innerHTML = gallery.innerHTML; // csak vizuális; pointer-events none marad
+      width = gallery.getBoundingClientRect().width || window.innerWidth;
+      return true;
+    }
+    function setTrack(x) {
+      track.style.transform = `translate3d(${x}px,0,0)`;
+    }
+    function setTrackPct(pct) {
+      track.style.transform = `translate3d(calc(${pct}% - 100%),0,0)`; // -100% a közép
+    }
+    function enableTransition(withDelay) {
+      // Finom késleltetett érkezés
+      const delay = withDelay ? ' .10s' : '';
+      track.style.transition = `transform .28s cubic-bezier(0.15, 0.9, 0.1, 1.0)${delay}`;
+    }
+    function disableTransition() { track.style.transition = 'none'; }
+    // Szomszéd kategóriák előtöltése
+    function fetchGallery(file) {
+      return fetch(file, { credentials: 'same-origin' })
+        .then(r => r.text())
+        .then(html => { const d=document.createElement('div'); d.innerHTML = html; const g=d.querySelector('#gallery'); return g ? g.innerHTML : ''; })
+        .catch(() => '');
+    }
+    function prefillNeighbors() {
+      const prevIdx = cur - 1, nextIdx = cur + 1;
+      const innerPrev = slidePrev.firstElementChild; const innerNext = slideNext.firstElementChild;
+      if (categories[prevIdx]) fetchGallery(categories[prevIdx].file).then(h => { innerPrev.innerHTML = h; });
+      if (categories[nextIdx]) fetchGallery(categories[nextIdx].file).then(h => { innerNext.innerHTML = h; });
+    }
     const onStart = (e) => {
       if (lightboxActive()) { touching = false; return; }
       const t = e.touches ? e.touches[0] : e;
+      if (!buildSlider()) { touching = false; return; }
+      prefillNeighbors();
+      disableTransition();
       startX = t.clientX; startY = t.clientY; dx = 0; dy = 0; touching = true;
     };
     const onMove = (e) => {
       if (!touching || lightboxActive()) return;
       const t = e.touches ? e.touches[0] : e;
       dx = t.clientX - startX; dy = t.clientY - startY;
+      if (Math.abs(dy) > Math.abs(dx)) return; // vertikális mozgást ne kövessük
+      // Kövesse az ujjat
+      setTrack(dx);
     };
     const onEnd = () => {
       if (!touching || lightboxActive()) return; touching = false;
-      if (Math.abs(dx) > 60 && Math.abs(dy) < 40) {
-        const next = dx < 0 ? cur + 1 : cur - 1;
-        if (next >= 0 && next < categories.length) {
-          location.href = categories[next].file;
+      const threshold = (width || window.innerWidth) * 0.25;
+      if (Math.abs(dx) > threshold && Math.abs(dy) < 40) {
+        const nextIdx = dx < 0 ? cur + 1 : cur - 1;
+        if (nextIdx >= 0 && nextIdx < categories.length) {
+          enableTransition(true); // kis késleltetett érkezés
+          // Animáció befejezése
+          const targetPct = dx < 0 ? -200 : 0; // balra húzás → -200%, jobbra → 0%
+          setTrackPct(targetPct);
+          // Navigáció animáció végén
+          const handler = () => { track.removeEventListener('transitionend', handler); const href = categories[nextIdx].file; location.href = href; };
+          track.addEventListener('transitionend', handler);
+          return;
         }
       }
+      // visszapattanás
+      enableTransition(false);
+      setTrackPct(-100);
     };
     document.addEventListener("touchstart", onStart, { passive: true });
     document.addEventListener("touchmove", onMove, { passive: true });
