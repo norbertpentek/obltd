@@ -263,6 +263,24 @@ window.onload = function () {
     let width = 0;
     // Slider overlay elemek
     let slider = null, track = null, slidePrev = null, slideCur = null, slideNext = null;
+    function sanitizeGridFromElement(el) {
+      try {
+        const imgs = Array.from(el.querySelectorAll('img'));
+        const out = imgs.map((im) => {
+          const src = im.getAttribute('src');
+          const alt = im.getAttribute('alt') || '';
+          return `<img src="${src}" alt="${alt}">`;
+        });
+        return `<div class="gallery-grid">${out.join('')}</div>`;
+      } catch (e) { return ''; }
+    }
+    function sanitizeGridFromHTML(html) {
+      try {
+        const d = document.createElement('div'); d.innerHTML = html;
+        const g = d.querySelector('#gallery'); if (!g) return '';
+        return sanitizeGridFromElement(g);
+      } catch (e) { return ''; }
+    }
     function buildSlider() {
       const gallery = document.getElementById('gallery');
       if (!gallery) return false;
@@ -277,9 +295,10 @@ window.onload = function () {
       track.appendChild(slidePrev); track.appendChild(slideCur); track.appendChild(slideNext);
       slider.appendChild(track);
       gallery.appendChild(slider);
-      // aktuális galéria klónozása vizuális rétegbe
+      // aktuális galéria klónozása vizuális rétegbe (csak képek), és az eredeti elrejtése
       const innerCur = slideCur.firstElementChild;
-      innerCur.innerHTML = `<div class="gallery-grid">${gallery.innerHTML}</div>`; // csak vizuális
+      innerCur.innerHTML = sanitizeGridFromElement(gallery);
+      gallery.style.visibility = 'hidden';
       width = gallery.getBoundingClientRect().width || window.innerWidth;
       return true;
     }
@@ -299,14 +318,14 @@ window.onload = function () {
     function fetchGallery(file) {
       return fetch(file, { credentials: 'same-origin' })
         .then(r => r.text())
-        .then(html => { const d=document.createElement('div'); d.innerHTML = html; const g=d.querySelector('#gallery'); return g ? g.innerHTML : ''; })
+        .then(html => sanitizeGridFromHTML(html))
         .catch(() => '');
     }
     function prefillNeighbors() {
       const prevIdx = cur - 1, nextIdx = cur + 1;
       const innerPrev = slidePrev.firstElementChild; const innerNext = slideNext.firstElementChild;
-      if (categories[prevIdx]) fetchGallery(categories[prevIdx].file).then(h => { innerPrev.innerHTML = `<div class="gallery-grid">${h}</div>`; });
-      if (categories[nextIdx]) fetchGallery(categories[nextIdx].file).then(h => { innerNext.innerHTML = `<div class="gallery-grid">${h}</div>`; });
+      if (categories[prevIdx]) fetchGallery(categories[prevIdx].file).then(h => { innerPrev.innerHTML = h; });
+      if (categories[nextIdx]) fetchGallery(categories[nextIdx].file).then(h => { innerNext.innerHTML = h; });
     }
     const onStart = (e) => {
       if (lightboxActive()) { touching = false; return; }
@@ -314,6 +333,7 @@ window.onload = function () {
       if (!buildSlider()) { touching = false; return; }
       // Vegyük át ideiglenesen az eseményeket, hogy ne nyíljon meg a lightbox
       slider.style.pointerEvents = 'auto';
+      try { e.preventDefault(); } catch (e) {}
       prefillNeighbors();
       disableTransition();
       startX = t.clientX; startY = t.clientY; dx = 0; dy = 0; touching = true;
@@ -345,11 +365,11 @@ window.onload = function () {
       // visszapattanás
       enableTransition(false);
       setTrackPct(-100);
-      const handler2 = () => { track.removeEventListener('transitionend', handler2); slider && (slider.style.pointerEvents = 'none'); slider && slider.remove(); };
+      const handler2 = () => { track.removeEventListener('transitionend', handler2); const g=document.getElementById('gallery'); if (g) g.style.visibility=''; slider && (slider.style.pointerEvents = 'none'); slider && slider.remove(); };
       track.addEventListener('transitionend', handler2);
     };
-    document.addEventListener("touchstart", onStart, { passive: true });
-    document.addEventListener("touchmove", onMove, { passive: true });
+    document.addEventListener("touchstart", onStart, { passive: false });
+    document.addEventListener("touchmove", onMove, { passive: false });
     document.addEventListener("touchend", onEnd, { passive: true });
   }
   function init() {
