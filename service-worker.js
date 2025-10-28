@@ -1,4 +1,4 @@
-const CACHE_NAME = "static-cache-v8.16";
+const CACHE_NAME = "static-cache-v8.17";
 const STATIC_ASSETS = ["/kepek/tree.webp", "/kepek/ko.webp", "/kepek/sky.webp"];
 
 // Install event - caching static assets

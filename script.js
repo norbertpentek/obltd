@@ -279,12 +279,12 @@ window.onload = function () {
       gallery.appendChild(slider);
       // aktuális galéria klónozása vizuális rétegbe
       const innerCur = slideCur.firstElementChild;
-      innerCur.innerHTML = gallery.innerHTML; // csak vizuális; pointer-events none marad
+      innerCur.innerHTML = `<div class="gallery-grid">${gallery.innerHTML}</div>`; // csak vizuális
       width = gallery.getBoundingClientRect().width || window.innerWidth;
       return true;
     }
     function setTrack(x) {
-      track.style.transform = `translate3d(${x}px,0,0)`;
+      track.style.transform = `translate3d(calc(-100% + ${x}px),0,0)`;
     }
     function setTrackPct(pct) {
       track.style.transform = `translate3d(calc(${pct}% - 100%),0,0)`; // -100% a közép
@@ -305,13 +305,15 @@ window.onload = function () {
     function prefillNeighbors() {
       const prevIdx = cur - 1, nextIdx = cur + 1;
       const innerPrev = slidePrev.firstElementChild; const innerNext = slideNext.firstElementChild;
-      if (categories[prevIdx]) fetchGallery(categories[prevIdx].file).then(h => { innerPrev.innerHTML = h; });
-      if (categories[nextIdx]) fetchGallery(categories[nextIdx].file).then(h => { innerNext.innerHTML = h; });
+      if (categories[prevIdx]) fetchGallery(categories[prevIdx].file).then(h => { innerPrev.innerHTML = `<div class="gallery-grid">${h}</div>`; });
+      if (categories[nextIdx]) fetchGallery(categories[nextIdx].file).then(h => { innerNext.innerHTML = `<div class="gallery-grid">${h}</div>`; });
     }
     const onStart = (e) => {
       if (lightboxActive()) { touching = false; return; }
       const t = e.touches ? e.touches[0] : e;
       if (!buildSlider()) { touching = false; return; }
+      // Vegyük át ideiglenesen az eseményeket, hogy ne nyíljon meg a lightbox
+      slider.style.pointerEvents = 'auto';
       prefillNeighbors();
       disableTransition();
       startX = t.clientX; startY = t.clientY; dx = 0; dy = 0; touching = true;
@@ -335,7 +337,7 @@ window.onload = function () {
           const targetPct = dx < 0 ? -200 : 0; // balra húzás → -200%, jobbra → 0%
           setTrackPct(targetPct);
           // Navigáció animáció végén
-          const handler = () => { track.removeEventListener('transitionend', handler); const href = categories[nextIdx].file; location.href = href; };
+          const handler = () => { track.removeEventListener('transitionend', handler); slider.style.pointerEvents = 'none'; const href = categories[nextIdx].file; location.href = href; };
           track.addEventListener('transitionend', handler);
           return;
         }
@@ -343,6 +345,8 @@ window.onload = function () {
       // visszapattanás
       enableTransition(false);
       setTrackPct(-100);
+      const handler2 = () => { track.removeEventListener('transitionend', handler2); slider && (slider.style.pointerEvents = 'none'); slider && slider.remove(); };
+      track.addEventListener('transitionend', handler2);
     };
     document.addEventListener("touchstart", onStart, { passive: true });
     document.addEventListener("touchmove", onMove, { passive: true });
