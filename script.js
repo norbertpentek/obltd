@@ -259,7 +259,7 @@ window.onload = function () {
   function attachSwipeNav() {
     const cur = categories.findIndex((c) => currentPath() === c.file);
     if (cur < 0) return;
-    let startX = 0, startY = 0, dx = 0, dy = 0, touching = false;
+    let startX = 0, startY = 0, dx = 0, dy = 0, touching = false, sliding = false;
     let width = 0;
     // Slider overlay elemek
     let slider = null, track = null, slidePrev = null, slideCur = null, slideNext = null;
@@ -330,24 +330,34 @@ window.onload = function () {
     const onStart = (e) => {
       if (lightboxActive()) { touching = false; return; }
       const t = e.touches ? e.touches[0] : e;
-      if (!buildSlider()) { touching = false; return; }
-      // Vegyük át ideiglenesen az eseményeket, hogy ne nyíljon meg a lightbox
-      slider.style.pointerEvents = 'auto';
-      try { e.preventDefault(); } catch (e) {}
-      prefillNeighbors();
-      disableTransition();
+      sliding = false;
       startX = t.clientX; startY = t.clientY; dx = 0; dy = 0; touching = true;
     };
     const onMove = (e) => {
       if (!touching || lightboxActive()) return;
       const t = e.touches ? e.touches[0] : e;
       dx = t.clientX - startX; dy = t.clientY - startY;
-      if (Math.abs(dy) > Math.abs(dx)) return; // vertikális mozgást ne kövessük
-      // Kövesse az ujjat
+      if (!sliding) {
+        const minDx = 8;
+        if (Math.abs(dx) < minDx) return;
+        if (Math.abs(dy) > Math.abs(dx)) {
+          // függőleges – engedjük a görgetést
+          return;
+        }
+        // vízszintes – indítsuk a slidert
+        if (!buildSlider()) { touching = false; return; }
+        slider.style.pointerEvents = 'auto';
+        prefillNeighbors();
+        disableTransition();
+        sliding = true;
+      }
+      try { e.preventDefault(); } catch (err) {}
       setTrack(dx);
     };
     const onEnd = () => {
-      if (!touching || lightboxActive()) return; touching = false;
+      if (!touching || lightboxActive()) return; 
+      touching = false;
+      if (!sliding) return;
       const threshold = (width || window.innerWidth) * 0.25;
       if (Math.abs(dx) > threshold && Math.abs(dy) < 40) {
         const nextIdx = dx < 0 ? cur + 1 : cur - 1;
@@ -365,10 +375,10 @@ window.onload = function () {
       // visszapattanás
       enableTransition(false);
       setTrackPct(-100);
-      const handler2 = () => { track.removeEventListener('transitionend', handler2); const g=document.getElementById('gallery'); if (g) g.style.visibility=''; slider && (slider.style.pointerEvents = 'none'); slider && slider.remove(); };
+      const handler2 = () => { track.removeEventListener('transitionend', handler2); const g=document.getElementById('gallery'); if (g) g.style.visibility=''; slider && (slider.style.pointerEvents = 'none'); slider && slider.remove(); sliding = false; };
       track.addEventListener('transitionend', handler2);
     };
-    document.addEventListener("touchstart", onStart, { passive: false });
+    document.addEventListener("touchstart", onStart, { passive: true });
     document.addEventListener("touchmove", onMove, { passive: false });
     document.addEventListener("touchend", onEnd, { passive: true });
   }
